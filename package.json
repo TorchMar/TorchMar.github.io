@@ -1,0 +1,21 @@
+{
+  "name": "blog-of-TorchMar",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:ssg",
+    "build:spa": "valaxy build",
+    "build:ssg": "valaxy build --ssg",
+    "dev": "valaxy",
+    "rss": "valaxy rss",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "valaxy": "0.23.3",
+    "valaxy-theme-yun": "0.23.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
