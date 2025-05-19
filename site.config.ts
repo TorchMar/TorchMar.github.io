@@ -7,12 +7,12 @@ export default defineSiteConfig({
   subtitle:'Here is what I am thinking',
   author: {
     name: 'TorchMar',
-    avatar:"/images/Ray.jpg",
+    avatar:"https://github.com/TorchMar/TorchMar.github.io/tree/hexo/images/Ray.jpg",
     status: {
       emoji: '💛' // 头像旁边的emoji
     },
   },
-  favicon: '/images/favicon.ico',
+  favicon: 'https://github.com/TorchMar/TorchMar.github.io/tree/hexo/images/favicon.ico',
   description: 'Always exploring, always learning.',
   social: [
     {
