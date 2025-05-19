@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "valaxy": "0.23.3",
+    "valaxy-addon-twikoo": "^0.0.3",
     "valaxy-theme-yun": "0.23.3"
   },
   "devDependencies": {

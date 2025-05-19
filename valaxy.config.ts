@@ -1,7 +1,7 @@
 import type { UserThemeConfig } from 'valaxy-theme-yun'
 import { defineValaxyConfig } from 'valaxy'
 
-//import { addonTwikoo } from 'valaxy-addon-twikoo'  //接入Twikoo评论系统
+import { addonTwikoo } from 'valaxy-addon-twikoo'  //接入Twikoo评论系统
 
 // add icons what you will need
 const safelist = [
@@ -74,5 +74,9 @@ export default defineValaxyConfig<UserThemeConfig>({
       enable: true  //这里是评论的设置，如果你不需要评论，可以将enable改为false即可
     },
   },
-  
+  addons: [
+    addonTwikoo({
+      envId: 'https://twikoo-torchmar.netlify.app/.netlify/functions/twikoo'
+    }),
+  ],
 })
