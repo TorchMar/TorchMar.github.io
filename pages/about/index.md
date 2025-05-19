@@ -1,15 +1,40 @@
 ---
-title: 关于我
+title: About me
 ---
-
-I am developing [Valaxy](https://github.com/YunYouJun/valaxy) - Next Generation Static Blog Framework.
-
-If you like it, you can sponsor me in [GitHub](https://github.com/sponsors/YunYouJun) or [www.yunyoujun.cn/sponsors/](https://www.yunyoujun.cn/sponsors/).
+## Hi there 👋 I'm Yuhong Liu (TorchMar)
 
 ---
 
-我正在开发 [Valaxy](https://github.com/YunYouJun/valaxy) - 下一代静态博客框架。
+📖 I'm currently an undergraduate student (from 2026 Fall) at Antai College of Economics and Management, Shanghai Jiao Tong University, pursueing a Bachelor's degree in Finance and Computer Science.
 
-如果你喜欢它，你可以在 [GitHub](https://github.com/sponsors/YunYouJun) 或 [www.yunyoujun.cn/sponsors/](https://www.yunyoujun.cn/sponsors/) 赞助我。
+💫 I'm interested in Computer Science and Large Language Models, especially the interdisciplinary area between machine learning and finance. Now I'm doing a PRP program *Research of LLM deployed in Corporate Governance.*
 
-Check out the [Valaxy | GitHub](https://github.com/YunYouJun/valaxy) for more details.
+🖥️ I was formally an OIer in high school. In other words, I used to enjoy programming and compete in the Olympiad of Informatics (OI). 
+
+📄 I am now a member of Academic Department of Student Union of Antai. I'm also an active member of Technology Department of Art Center of SJTU, participating in holding performances like Top-ten Singers and OASIS Music Festi.
+
+📝 I am now learning to become a blogger. Here's my [personal website](https://torchmar.github.io/). Hope my blogs will help you.
+
+
+
+## My Interests
+
+---
+
+📚 I'm interested in Japanese literature and lyric literature. My facorite authors are Kawabata Yasunari and Okawa Ito.
+
+🖋️ I'm also interested in writing, especially short novel writing.
+
+👟 I'm now learning body buiding and trying to advance in volleyball. My position is libero defensive player.
+
+🖥️ I have played computer games maybe since I was 3. My first game is Plant versus Zombies.
+
+🎮 My game interest focuses on Arknights, Identity V (now a survivor member of school team) and rhythm games.
+
+⌨️ I also play games like Overwatch, Palworld, Counter Strike and Minecraft.
+
+🎶 I like music and love singing. My favorite singer is Sia. I also like Lady Gaga and Rihanna's songs.
+
+📺 I've been enjoying ACGN since 2018. My first animation is [Miss Kobayashi&#39;s Dragon Maid](https://bangumi.tv/subject/179949).
+
+🏫 I'm an active member of [SJTU Identity V Club](https://space.bilibili.com/1002245415?spm_id_from=333.337.0.0) and SJTU Volleyball Club.
