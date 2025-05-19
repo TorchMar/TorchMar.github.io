@@ -1,7 +1,4 @@
 ---
-title: 关于站点
+title: About the Site
 ---
-
-Valaxy + valaxy-theme-yun Demo Site
-
-- Default Theme: [valaxy-theme-yun](https://github.com/YunYouJun/valaxy/blob/main/packages/valaxy-theme-yun/)
+2025.5.18 The site was successfully set!
