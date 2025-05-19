@@ -12,7 +12,7 @@ export default defineSiteConfig({
       emoji: '💛' // 头像旁边的emoji
     },
   },
-  favicon: 'https://TorchMar.github.io/images/favicon.ico',
+  favicon: 'https://TorchMar.github.io/favicon.ico',
   description: 'Always exploring, always learning.',
   social: [
     {
