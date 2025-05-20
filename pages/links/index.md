@@ -7,6 +7,8 @@ random: true
 ---
 ## 希望能和你交换友链！ Hope to exchange Friend Links with yours!
 
+<YunLinks :links="frontmatter.links" :random="frontmatter.random" errorImg="https://cdn.yunyoujun.cn/img/avatar/none.jpg" />
+
 我的友链：
 
 ```
