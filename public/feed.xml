@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Valaxy Theme Yun</title>
+        <title>TorchMar's Blog</title>
         <link>https://valaxy.site/</link>
-        <description>Valaxy Theme Yun Preview.</description>
-        <lastBuildDate>Sun, 18 May 2025 15:52:11 GMT</lastBuildDate>
+        <description>Always exploring, always learning.</description>
+        <lastBuildDate>Tue, 20 May 2025 07:50:35 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
-            <title>Valaxy Theme Yun</title>
-            <url>https://valaxy.site/valaxy-logo.png</url>
+            <title>TorchMar's Blog</title>
+            <url>https://torchmar.github.io/images/Ray.ico</url>
             <link>https://valaxy.site/</link>
         </image>
-        <copyright>CC BY-NC-SA 4.0 2025 © 云游君</copyright>
+        <copyright>CC BY-NC-SA 4.0 2025 © TorchMar</copyright>
         <atom:link href="https://valaxy.site/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Hello, Valaxy!]]></title>
@@ -25,7 +25,7 @@
 <h2>Usage</h2>
 <p>Modify `valaxy</p>
 <br/><p>访问 <a href="https://valaxy.site/posts/hello-valaxy" target="_blank">https://valaxy.site/posts/hello-valaxy</a> 阅读全文。</p>]]></content:encoded>
-            <author>i@valaxy.site (云游君)</author>
+            <author>i@valaxy.site (TorchMar)</author>
         </item>
     </channel>
 </rss>

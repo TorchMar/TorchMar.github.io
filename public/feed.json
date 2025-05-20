@@ -1,12 +1,12 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Valaxy Theme Yun",
+    "title": "TorchMar's Blog",
     "home_page_url": "https://valaxy.site/",
     "feed_url": "https://valaxy.site/feed.json",
-    "description": "Valaxy Theme Yun Preview.",
-    "icon": "https://valaxy.site/valaxy-logo.png",
+    "description": "Always exploring, always learning.",
+    "icon": "https://torchmar.github.io/images/Ray.ico",
     "author": {
-        "name": "云游君",
+        "name": "TorchMar",
         "url": "https://valaxy.site"
     },
     "items": [
@@ -18,7 +18,7 @@
             "date_modified": "2022-04-01T00:00:00.000Z",
             "date_published": "2022-04-01T00:00:00.000Z",
             "author": {
-                "name": "云游君",
+                "name": "TorchMar",
                 "url": "https://valaxy.site"
             }
         }

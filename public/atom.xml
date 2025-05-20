@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://valaxy.site/</id>
-    <title>Valaxy Theme Yun</title>
-    <updated>2025-05-18T15:52:11.816Z</updated>
+    <title>TorchMar's Blog</title>
+    <updated>2025-05-20T07:50:35.392Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
-        <name>云游君</name>
+        <name>TorchMar</name>
         <email>i@valaxy.site</email>
         <uri>https://valaxy.site</uri>
     </author>
     <link rel="alternate" href="https://valaxy.site/"/>
     <link rel="self" href="https://valaxy.site/atom.xml"/>
-    <subtitle>Valaxy Theme Yun Preview.</subtitle>
-    <logo>https://valaxy.site/valaxy-logo.png</logo>
+    <subtitle>Always exploring, always learning.</subtitle>
+    <logo>https://torchmar.github.io/images/Ray.ico</logo>
     <icon>https://valaxy.site/favicon.svg</icon>
-    <rights>CC BY-NC-SA 4.0 2025 © 云游君</rights>
+    <rights>CC BY-NC-SA 4.0 2025 © TorchMar</rights>
     <entry>
         <title type="html"><![CDATA[Hello, Valaxy!]]></title>
         <id>https://valaxy.site/posts/hello-valaxy</id>
@@ -27,7 +27,7 @@
 <p>Modify `valaxy</p>
 <br/><p>访问 <a href="https://valaxy.site/posts/hello-valaxy" target="_blank">https://valaxy.site/posts/hello-valaxy</a> 阅读全文。</p>]]></content>
         <author>
-            <name>云游君</name>
+            <name>TorchMar</name>
             <email>i@valaxy.site</email>
             <uri>https://valaxy.site</uri>
         </author>
