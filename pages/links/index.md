@@ -2,7 +2,7 @@
 title: 我的小伙伴们
 keywords: 链接
 description: 托奇玛的小伙伴们
-links: /links.json
+links: https://torchmar.github.io/links.json
 random: true
 ---
 ## 希望能和你交换友链！ Hope to exchange Friend Links with yours!
