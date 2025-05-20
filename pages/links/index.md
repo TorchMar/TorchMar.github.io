@@ -13,18 +13,18 @@ random: true
 
 我的友链：
 
-```
-“url”: “https://torchmar.github.io",
-“avatar”: “https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg",
-“name”: “TorchMar's blog”,
-“blog”: “TorchMar's blog”,
-“desc”: “Here is what I am thinking”,
-“color”: “#8c3cd7”
+```json
+"url": "https://torchmar.github.io",
+"avatar": "https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg",
+"name": "TorchMar's blog",
+"blog": "TorchMar's blog",
+"desc": "Here is what I am thinking",
+"color": "#8c3cd7"
 ```
 
 你的友链格式：
 
-```
+```json
 "url": "Your Website URL",
 "avatar": "Your Avatar URL",
 "name": "Your Website Name",
