@@ -7,19 +7,19 @@ random: true
 ---
 ## 希望能和你交换友链！
 
-## Hope to exchange Friend Links with yours!
+### Hope to exchange Friend Links with yours!
 
 <YunLinks :links="frontmatter.links" :random="frontmatter.random" errorImg="https://cdn.yunyoujun.cn/img/avatar/none.jpg" />
 
 我的友链：
 
 ```
-* “url”: “[https://torchmar.github.io/"](https://torchmar.github.io/%22),
-* “avatar”: “[https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg"](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg%22),
-* “name”: “TorchMar's blog”,
-* “blog”: “TorchMar's blog”,
-* “desc”: “Here is what I am thinking”,
-* “color”: “#8c3cd7”
+“url”: “https://torchmar.github.io",
+“avatar”: “https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg",
+“name”: “TorchMar's blog”,
+“blog”: “TorchMar's blog”,
+“desc”: “Here is what I am thinking”,
+“color”: “#8c3cd7”
 ```
 
 你的友链格式：
