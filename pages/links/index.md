@@ -9,21 +9,25 @@ random: true
 
 我的友链：
 
-* “url”: “[https://torchmar.github.io/&#34;](https://torchmar.github.io/%22),
-  “avatar”: “[https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg&#34;](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg%22),
-  “name”: “TorchMar's blog”,
-  “blog”: “TorchMar's blog”,
-  “desc”: “Here is what I am thinking”,
-  “color”: “#8c3cd7”
+```
+* “url”: “[https://torchmar.github.io/"](https://torchmar.github.io/%22),
+* “avatar”: “[https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg"](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg%22),
+* “name”: “TorchMar's blog”,
+* “blog”: “TorchMar's blog”,
+* “desc”: “Here is what I am thinking”,
+* “color”: “#8c3cd7”
+```
 
 你的友链格式：
 
-* "url": "Your Website URL",
-  "avatar": "Your Avatar URL",
-  "name": "Your Website Name",
-  "blog": "Your Website Namce",
-  "desc": "Description",
-  "color": "You can choose one color to display（Default #0078e7）"
+```
+"url": "Your Website URL",
+"avatar": "Your Avatar URL",
+"name": "Your Website Name",
+"blog": "Your Website Namce",
+"desc": "Description",
+"color": "You can choose one color to display（Default #0078e7）"
+```
 
 友链要求：
 
