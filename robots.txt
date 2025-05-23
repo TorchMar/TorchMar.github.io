@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://torchmar.github.io/sitemap.xml

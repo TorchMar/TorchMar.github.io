@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>TorchMar's Blog</title>
+        <link>https://torchmar.github.io/</link>
+        <description>Always exploring, always learning.</description>
+        <lastBuildDate>Fri, 23 May 2025 02:00:03 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>TorchMar's Blog</title>
+            <url>https://torchmar.github.io/images/Ray.jpg</url>
+            <link>https://torchmar.github.io/</link>
+        </image>
+        <copyright>CC BY-NC-SA 4.0 2025 © TorchMar</copyright>
+        <atom:link href="https://torchmar.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[小满散记]]></title>
+            <link>https://torchmar.github.io/posts/2025521writing</link>
+            <guid>https://torchmar.github.io/posts/2025521writing</guid>
+            <pubDate>Tue, 20 May 2025 16:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<p>  今天是个很有趣的日子。既是“521”，又是小满节气。临近“525”，往年这个时候一中（我的高中母校）也该上525的心理课了。正好在期末周间隙借着这个时间来怀怀旧。</p>
+<p>&amp;emsp</p>
+<br/><p>访问 <a href="https://torchmar.github.io/posts/2025521writing" target="_blank">https://torchmar.github.io/posts/2025521writing</a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (TorchMar)</author>
+        </item>
+        <item>
+            <title><![CDATA[Hello, Valaxy!]]></title>
+            <link>https://torchmar.github.io/posts/hello-valaxy</link>
+            <guid>https://torchmar.github.io/posts/hello-valaxy</guid>
+            <pubDate>Fri, 01 Apr 2022 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Valaxy</h2>
+<p>Next Generation Static Blog Framework.</p>
+<p>Write your first post!</p>
+<h2>Usage</h2>
+<p>Modify `valaxy.</p>
+<br/><p>访问 <a href="https://torchmar.github.io/posts/hello-valaxy" target="_blank">https://torchmar.github.io/posts/hello-valaxy</a> 阅读全文。</p>]]></content:encoded>
+            <author>i@valaxy.site (TorchMar)</author>
+        </item>
+    </channel>
+</rss>
