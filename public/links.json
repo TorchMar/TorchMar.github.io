@@ -15,5 +15,13 @@
     "blog": "码上观澜 - 椰冻的技术笔记 | Coconut Jelly",
     "desc": "Stay hungry, stay foolish.",
     "color": "#4169e1"
+    },
+{
+    "url": "https://sqzr2319.github.io",
+    "avatar": "https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/avatarchu.png",
+    "name": "Yifeng Chu",
+    "blog": "sqzr2319's blog",
+    "desc": "Per Aspera Ad Astra",
+    "color": "#66ccff"
     }
 ]
