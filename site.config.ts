@@ -39,6 +39,12 @@ export default defineSiteConfig({
       icon: 'i-ri-mail-line',
       color: '#8E71C1',
     },
+    {
+      name: 'Travelling',
+      link: 'https://www.travellings.cn/go-by-clouds.html',
+      icon: 'i-ri-train-line',
+      color: 'var(--va-c-text)',
+    },
   ],
 
   timezone: 'Asia/Shanghai',
