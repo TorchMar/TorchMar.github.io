@@ -7,7 +7,7 @@ title: About me
 
 💫 I'm interested in Computer Science and Large Language Models, especially the interdisciplinary area between machine learning and finance. Now I'm doing a PRP program *Research of LLM deployed in Corporate Governance.*
 
-🖥️ I was formally an OIer in high school. In other words, I used to enjoy programming and compete in the Olympiad of Informatics (OI).
+🖥️ I was formerly an OIer in high school. In other words, I used to enjoy programming and compete in the Olympiad of Informatics (OI).
 
 📄 I am now a member of Academic Department of Student Union of Antai. I'm also an active member of Technology Department of Art Center of SJTU, participating in holding performances like Top-ten Singers and OASIS Music Festi.
 
