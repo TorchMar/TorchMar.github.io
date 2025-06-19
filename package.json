@@ -13,9 +13,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "valaxy": "0.23.3",
+    "valaxy": "0.23.5",
     "valaxy-addon-twikoo": "^0.0.3",
-    "valaxy-theme-yun": "0.23.3"
+    "valaxy-theme-yun": "0.23.5"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
