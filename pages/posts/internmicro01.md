@@ -4,10 +4,6 @@ title: 中微幼教版（应该）：01 效率与市场
 date: 2026-02-03
 update: 2026-02-03
 tags:
-  - 散记
-categories:
-  - 随笔散记
-tags:
   - 经济学
   - 教程
 categories:
