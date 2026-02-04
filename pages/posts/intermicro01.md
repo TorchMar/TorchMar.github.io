@@ -72,13 +72,13 @@ categories:
 > 给小L一个香蕉和一个苹果，小D什么都没有，这个分配是PE吗？
 
 <details style="
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
+  background: var(--bg-secondary, transparent);
+  border: 1px solid var(--border-color, currentColor);
   border-radius: 6px;
   padding: 0.75em 1em;
   margin: 1em 0;
 ">
-  <summary style="font-weight: 600; cursor: pointer;">
+  <summary style="font-weight: 600;">
     你可以好好想想再看这个答案
   </summary>
   <p style="margin-top: 0.75em;">
@@ -105,13 +105,13 @@ categories:
 > 让小L用2刀换一根香蕉（即完成一次交易后），新的状况$(x',y')$是PE吗？
 
 <details style="
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
+  background: var(--bg-secondary, transparent);
+  border: 1px solid var(--border-color, currentColor);
   border-radius: 6px;
   padding: 0.75em 1em;
   margin: 1em 0;
 ">
-  <summary style="font-weight: 600; cursor: pointer;">
+  <summary style="font-weight: 600;">
     你可以好好想想再看这个答案
   </summary>
   <p style="margin-top: 0.75em;">
@@ -126,13 +126,13 @@ categories:
 > $(x,y)$是PE的吗？
 
 <details style="
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
+  background: var(--bg-secondary, transparent);
+  border: 1px solid var(--border-color, currentColor);
   border-radius: 6px;
   padding: 0.75em 1em;
   margin: 1em 0;
 ">
-  <summary style="font-weight: 600; cursor: pointer;">
+  <summary style="font-weight: 600;">
     你可以好好想想再看这个答案
   </summary>
 
@@ -188,13 +188,13 @@ categories:
 答案很显然是3，因为机器只有在小D手中能最大化价值。
 
 <details style="
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
+  background: var(--bg-secondary, transparent);
+  border: 1px solid var(--border-color, currentColor);
   border-radius: 6px;
   padding: 0.75em 1em;
   margin: 1em 0;
 ">
-  <summary style="font-weight: 600; cursor: pointer;">
+  <summary style="font-weight: 600;">
     一个简单的proof
   </summary>
   <p style="margin-top: 0.75em;">
