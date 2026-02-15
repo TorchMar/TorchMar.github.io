@@ -35,7 +35,7 @@ categories:
 > 的所有$\boldsymbol{x}$组成的集合叫做预算集。
 
 我们有没有机会将预算线图示出来呢？如果我们用横轴表示商品1的购买数量，纵轴表示商品2的数量，那么我们的预算集应该长这样：
-![预算线](image/intermicro03/1771143768071.png)
+![预算线](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1771143768071.png)
 
 我们又把这个线叫做预算线。预算线有一些性质，但是这对我们理解消费者行为并没有帮助，所以我们略去了。
 
@@ -47,7 +47,7 @@ categories:
 
 ### 当商品类别不止两个呢？
 以商品数量$N = 3$为例画出预算集：
-![N=3下的预算集](image/intermicro03/1771144325958.png)
+![N=3下的预算集](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1771144325958.png)
 
 ### 税收对预算集的扭曲
 比方说政府征收一个消费税，当我们消费商品1很多个的时候我们会被征收一定的从量税。具体地讲，当$x_1 \geq a$时，对超出的部分征收每单位$t$的税收。我们的预算线会变成什么样子呢？
@@ -64,7 +64,7 @@ categories:
   </summary>
   <div style="margin-top: 0.75em;">
     <img 
-      src="image/intermicro03/1771144727340.png" 
+      src="https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1771144727340.png"
       alt="Ans 1.1"
       style="max-width: 100%; height: auto;"
     >
@@ -86,12 +86,12 @@ $$
 
 ## 无差异曲线
 我们的效用函数$U$具有函数的基本特征（什么），所以效用函数应该是可以被画出来的。对于两个商品的情况，我们在一个三维坐标系中可以画出下面的一个示意图：
-![无差异曲线1](image/intermicro03/1771146460631.png)
+![无差异曲线1](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1771146460631.png)
 
 但是我们要的只是$z$轴上的效用，所以不妨思考一下，我们真的需要一个三维的图来解决一个看起来还挺简单的问题吗？
 
 自然是不需要的。我们可以令$U=a$等一系列常数，然后在二维坐标系中画出一系列的曲线来表示一些对我们来说没有差异的选择，我们把这一系列曲线叫做无差异曲线。无差异曲线图示如下：
-![无差异曲线2](image/intermicro03/1771146924042.png)
+![无差异曲线2](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1771146924042.png)
 
 一个很有趣的小定理：
 
@@ -120,7 +120,7 @@ CP问题有两个必要条件，但是这些条件在我看来并非足够严格
 如果我们的效用函数对于至少一个自变量（如$x_i$）是单增的，那么CP问题的解满足$\boldsymbol{x}^* \boldsymbol{p} =m$。
 
 这个的证明是显然的。如果我们花剩了，那就把剩下的钱全部花给$x_i$，这样我们得到的效用一定比原来更高。
-![Just Affordable 1](image/intermicro03/1771154422477.png)
+![Just Affordable 1](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1771154422477.png)
 
 上图是一个简单的图示。当我们处于绿点的时候，我们能负担得起这个消费，但我们并没有达到最大的效用；当我们处于蓝点的时候，我们拥有了更多的效用，但是我们并不能赊账购物！最终我们在反复的抉择中选择了红点，这也确实是CP问题的解。
 
@@ -154,7 +154,7 @@ $$
 这些只是CP问题最简单的介绍，上述简化模型的解基本都是内点解（所有商品都消费一定数量，没有商品不消费）。而在更多的时候，我们有一些边角解的情况可能会违反上述的等式，并不是我们的定理出了问题，而是~~我们人出了问题~~。比如当预算非常少的时候，或者当某个商品的价格非常高昂的时候，都可能导致边角解的产生。
 
 世界中的偏好也不全是WB的，有些稀奇古怪的偏好会导致解的变化，比如如下对小孩和猫的偏好与求解：
-![Kids & Cats](image/intermicro03/1771156987645.png)
+![Kids & Cats](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1771156987645.png)
 
 同样是内点解，但是上述的过程并不能解出这个答案，我们需要具体情况具体分析。
 
