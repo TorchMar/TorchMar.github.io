@@ -3,19 +3,17 @@ title: About me
 ---
 ## Hi there 👋 I'm Yuhong "TorchMar" Liu
 
-
 📖 I'm currently an undergraduate student (from 2024 Fall) at Antai College of Economics and Management, Shanghai Jiao Tong University, majoring in Finance and Computer Science.
 
 💫 I'm interested in Computer Science and Large Language Models. Currently I'm doing a research about diffusion language model and recommendation system.
 
 🖥️ I was formerly an OIer in high school. In other words, I used to enjoy programming and compete in the Olympiad of Informatics (OI).
 
-📄 I am now deputy director of the Academic Department of Students' Union of Antai. I'm also an active member of Technology Department of Art Center of SJTU, participating in holding performances like Top-ten Singers and OASIS Music Festi.
+📄 I am now the deputy director of the Academic Department of Students' Union of Antai. I'm also an active member of Technology Department of Art Center of SJTU, participating in holding performances like Top-ten Singers and OASIS Music Festi.
 
 📝 I am now learning to become a blogger. Here's my [personal website](https://torchmar.github.io/). Hope my blogs will help you.
 
 ## My Interests
-
 
 📚 I'm interested in Japanese literature and lyric literature. My facorite authors are Kawabata Yasunari and Okawa Ito.
 
