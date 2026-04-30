@@ -18,22 +18,29 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20
+          cache: pnpm
           registry-url: https://registry.npmjs.org/
 
       - name: 📦 Install Dependencies
-        run: npm i
+        run: pnpm install --frozen-lockfile
 
       - name: 🌌 Build Valaxy Blog
-        run: npm run build
+        run: pnpm run build
+             test -f ./dist/index.html
+             test -d ./dist/assets
 
       - name: 🪤 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
