@@ -3,43 +3,36 @@ name: GitHub Pages
 on:
   push:
     branches:
-      # The branch where the project source code resides
-      # 项目源代码所在的分支
       - hexo
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        node-version: [lts/*]
-        os: [ubuntu-latest]
-      fail-fast: false
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
           registry-url: https://registry.npmjs.org/
 
-      - name: 📦 Install Dependencies
+      - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: 🌌 Build Valaxy Blog
-        run: pnpm run build
-             test -f ./dist/index.html
-             test -d ./dist/assets
+      - name: Build Valaxy Blog
+        run: |
+          pnpm run build
+          test -f ./dist/index.html
+          test -d ./dist/assets
 
-      - name: 🪤 Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
