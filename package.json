@@ -3,11 +3,13 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
-    "build": "npm run build:ssg",
-    "build:spa": "valaxy build",
-    "build:ssg": "valaxy build --ssg",
+    "build": "pnpm run build:blog && pnpm run build:academic",
+    "build:academic": "node scripts/build-academic.mjs",
+    "build:blog": "valaxy build --ssg --output dist/blog",
+    "build:spa": "valaxy build --output dist/blog",
+    "build:ssg": "pnpm run build:blog",
     "dev": "valaxy",
     "rss": "valaxy rss",
     "serve": "vite preview",
@@ -19,6 +21,8 @@
     "valaxy-theme-yun": "0.23.5"
   },
   "devDependencies": {
+    "markdown-it": "14.1.0",
+    "yaml": "2.8.0",
     "typescript": "^5.8.3"
   }
 }

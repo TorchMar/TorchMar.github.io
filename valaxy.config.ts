@@ -16,6 +16,14 @@ export default defineValaxyConfig<UserThemeConfig>({
 
   theme: 'yun',
 
+  vite: {
+    base: '/blog/',
+  },
+
+  build: {
+    ssgForPagination: true,
+  },
+
   themeConfig: {
     banner: {
       enable: true,

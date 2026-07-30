@@ -1,7 +1,7 @@
 import { defineSiteConfig } from 'valaxy'
 
 export default defineSiteConfig({
-  url: 'https://torchmar.github.io/',
+  url: 'https://torchmar.github.io/blog/',
   lang: 'zh-CN',
   title: 'TorchMar\'s Blog',
   subtitle:'Here is what I am thinking',
@@ -17,7 +17,7 @@ export default defineSiteConfig({
   social: [
     {
       name: 'RSS',
-      link: '/atom.xml',
+      link: '/blog/atom.xml',
       icon: 'i-ri-rss-line',
       color: 'orange',
     },

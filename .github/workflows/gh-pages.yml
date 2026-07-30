@@ -26,11 +26,28 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build Valaxy Blog
+      - name: Build Academic Homepage and Valaxy Blog
         run: |
           pnpm run build
           test -f ./dist/index.html
-          test -d ./dist/assets
+          test -f ./dist/blog/index.html
+          test -d ./dist/blog/assets
+          test -f ./dist/blog/categories/index.html
+          test -f ./dist/categories/index.html
+          test -f ./dist/atom.xml
+          test -f ./dist/blog/atom.xml
+          while IFS= read -r page; do
+            relative="${page#./dist/blog/}"
+            route="${relative%.html}"
+            test -f "./dist/blog/${route}/index.html"
+            test -f "./dist/${relative}"
+            test -f "./dist/${route}/index.html"
+          done < <(find ./dist/blog -type f -name '*.html' ! -name 'index.html' ! -name '404.html')
+          cmp --silent ./dist/atom.xml ./dist/blog/atom.xml
+          grep -q 'https://torchmar.github.io/blog/posts/' ./dist/atom.xml
+          grep -q '<loc>https://torchmar.github.io/blog/posts/' ./dist/sitemap.xml
+          ! grep -q '<loc>https://torchmar.github.io/posts/' ./dist/sitemap.xml
+          ! grep -R --include='*.html' '/blog/blog/' ./dist/blog
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

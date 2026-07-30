@@ -1,0 +1,316 @@
+site:
+  url: https://torchmar.github.io/
+  title:
+    en: Your Name | Academic Homepage
+    zh: 你的姓名 | 学术主页
+  description:
+    en: Replace this sentence with a short description of your academic profile.
+    zh: 请将这句话替换为你的学术简介。
+  defaultLanguage: en
+
+profile:
+  enabled: true
+  name:
+    en: Your Name
+    zh: 你的姓名
+  role:
+    en: Your Current Academic Title
+    zh: 你当前的学术身份
+  affiliation:
+    en: Your Department, Your Institution
+    zh: 你的院系，你的学校或机构
+  location:
+    en: City, Country
+    zh: 城市，国家
+  photo: /images/Ray.jpg
+  photoAlt:
+    en: Profile image of Your Name
+    zh: 你的姓名的个人头像
+  email: your-email@example.com
+  bio:
+    en: |
+      Write a concise academic biography here. Introduce your current position,
+      education, research focus, and the questions that motivate your work.
+
+      Add a second paragraph when you need to describe collaborations,
+      opportunities, or other information for visitors.
+    zh: |
+      请在这里撰写简洁的学术简介，介绍你当前的身份、教育背景、研究方向，
+      以及你希望解决的学术问题。
+
+      如果需要介绍合作机会、招生信息或其他内容，可以继续添加第二段。
+  researchInterests:
+    en:
+      - Research Interest One
+      - Research Interest Two
+      - Research Interest Three
+    zh:
+      - 研究方向一
+      - 研究方向二
+      - 研究方向三
+  links:
+    - label:
+        en: Blog
+        zh: 博客
+      url: /blog/
+    - label:
+        en: Google Scholar
+        zh: 谷歌学术
+      url: https://scholar.google.com/
+    - label:
+        en: GitHub
+        zh: GitHub
+      url: https://github.com/TorchMar
+    - label:
+        en: CV
+        zh: 简历
+      url: "#"
+
+sections:
+  recentNews:
+    enabled: true
+    title:
+      en: Recent News
+      zh: 近期动态
+    items:
+      - date: YYYY.MM
+        text:
+          en: Replace this item with your latest academic update.
+          zh: 请将此条替换为你最近的学术动态。
+        links:
+          - label:
+              en: More
+              zh: 详情
+            url: "#"
+      - date: YYYY.MM
+        text:
+          en: Add another announcement, milestone, award, or paper update here.
+          zh: 在这里添加另一条公告、里程碑、获奖或论文动态。
+        links: []
+
+  publications:
+    enabled: true
+    title:
+      en: Publications
+      zh: 论文发表
+    intro:
+      en: Replace the sample entries below with your publications.
+      zh: 请将以下示例替换为你的论文。
+    items:
+      - title:
+          en: Title of Your Paper
+          zh: 你的论文标题
+        authors:
+          en: "**Your Name**, Coauthor One, Coauthor Two"
+          zh: "**你的姓名**、合作者一、合作者二"
+        venue:
+          en: Conference or Journal Name
+          zh: 会议或期刊名称
+        year: "20XX"
+        note:
+          en: Optional distinction, status, or short note.
+          zh: 可选的奖项、状态或简短说明。
+        links:
+          - label:
+              en: Paper
+              zh: 论文
+            url: "#"
+          - label:
+              en: Code
+              zh: 代码
+            url: "#"
+          - label:
+              en: Project
+              zh: 项目
+            url: "#"
+      - title:
+          en: Title of Another Paper
+          zh: 另一篇论文标题
+        authors:
+          en: Coauthor One, **Your Name**, Coauthor Two
+          zh: 合作者一、**你的姓名**、合作者二
+        venue:
+          en: arXiv preprint
+          zh: arXiv 预印本
+        year: "20XX"
+        note:
+          en: ""
+          zh: ""
+        links:
+          - label:
+              en: arXiv
+              zh: arXiv
+            url: "#"
+
+  education:
+    enabled: true
+    title:
+      en: Education
+      zh: 教育经历
+    items:
+      - period:
+          en: 20XX – Present
+          zh: 20XX – 至今
+        title:
+          en: Degree and Major
+          zh: 学位与专业
+        organization:
+          en: University Name
+          zh: 学校名称
+        location:
+          en: City, Country
+          zh: 城市，国家
+        details:
+          en: Add your advisor, honors program, thesis topic, or other relevant details.
+          zh: 添加导师、荣誉项目、论文题目或其他相关信息。
+        links: []
+
+  researchExperience:
+    enabled: false
+    title:
+      en: Research Experience
+      zh: 科研经历
+    items:
+      - period:
+          en: 20XX – Present
+          zh: 20XX – 至今
+        title:
+          en: Research Assistant
+          zh: 科研助理
+        organization:
+          en: Laboratory or Institution
+          zh: 实验室或机构
+        location:
+          en: City, Country
+          zh: 城市，国家
+        details:
+          en: Describe the research topic, your responsibilities, and the outcome.
+          zh: 描述研究主题、你的职责和研究成果。
+        links: []
+
+  honors:
+    enabled: false
+    title:
+      en: Honors & Awards
+      zh: 荣誉与奖项
+    items:
+      - period:
+          en: 20XX
+          zh: 20XX
+        title:
+          en: Name of Honor or Award
+          zh: 荣誉或奖项名称
+        organization:
+          en: Awarding Organization
+          zh: 授予机构
+        location:
+          en: ""
+          zh: ""
+        details:
+          en: Add a short description or selectivity when useful.
+          zh: 可补充简短说明或获奖比例。
+        links: []
+
+  projects:
+    enabled: false
+    title:
+      en: Projects
+      zh: 项目经历
+    items:
+      - period:
+          en: 20XX
+          zh: 20XX
+        title:
+          en: Project Title
+          zh: 项目名称
+        organization:
+          en: Your Role or Course
+          zh: 你的角色或课程
+        location:
+          en: ""
+          zh: ""
+        details:
+          en: Explain the project goal, method, and result in one or two sentences.
+          zh: 用一到两句话说明项目目标、方法和结果。
+        links:
+          - label:
+              en: Project
+              zh: 项目
+            url: "#"
+          - label:
+              en: Code
+              zh: 代码
+            url: "#"
+
+  teaching:
+    enabled: false
+    title:
+      en: Teaching
+      zh: 教学经历
+    items:
+      - period:
+          en: Term 20XX
+          zh: 20XX 学期
+        title:
+          en: Course Title
+          zh: 课程名称
+        organization:
+          en: Teaching Assistant
+          zh: 助教
+        location:
+          en: Institution Name
+          zh: 学校或机构名称
+        details:
+          en: Add the course number and your teaching responsibilities.
+          zh: 添加课程编号和你的教学职责。
+        links: []
+
+  academicService:
+    enabled: false
+    title:
+      en: Academic Service
+      zh: 学术服务
+    items:
+      - period:
+          en: 20XX
+          zh: 20XX
+        title:
+          en: Reviewer or Committee Role
+          zh: 审稿或委员会职务
+        organization:
+          en: Conference, Journal, or Organization
+          zh: 会议、期刊或组织
+        location:
+          en: ""
+          zh: ""
+        details:
+          en: Add optional details about the service.
+          zh: 添加有关该学术服务的可选说明。
+        links: []
+
+  talks:
+    enabled: false
+    title:
+      en: Talks
+      zh: 学术报告
+    items:
+      - period:
+          en: YYYY.MM
+          zh: YYYY.MM
+        title:
+          en: Title of Your Talk
+          zh: 报告题目
+        organization:
+          en: Host Organization or Event
+          zh: 主办机构或活动
+        location:
+          en: City or Online
+          zh: 城市或线上
+        details:
+          en: Add a one-sentence description of the talk.
+          zh: 添加一句话的报告简介。
+        links:
+          - label:
+              en: Slides
+              zh: 幻灯片
+            url: "#"
