@@ -1,53 +1,50 @@
 site:
   url: https://torchmar.github.io/
   title:
-    en: Your Name | Academic Homepage
-    zh: 你的姓名 | 学术主页
+    en: Yuhong Liu | Academic Homepage
+    zh: 刘昱宏 | 学术主页
   description:
-    en: Replace this sentence with a short description of your academic profile.
-    zh: 请将这句话替换为你的学术简介。
+    en: LLM & Agent Researcher.
+    zh: LLM和Agent研究者。
   defaultLanguage: en
 
 profile:
   enabled: true
   name:
-    en: Your Name
-    zh: 你的姓名
+    en: Yuhong Liu
+    zh: 刘昱宏
   role:
-    en: Your Current Academic Title
-    zh: 你当前的学术身份
+    en: Undergraduate Student
+    zh: 本科生
   affiliation:
-    en: Your Department, Your Institution
-    zh: 你的院系，你的学校或机构
+    en: Antai College of Economics and Management, Shanghai Jiao Tong University
+    zh: 安泰经济与管理学院，上海交通大学
   location:
-    en: City, Country
-    zh: 城市，国家
+    en: Shanghai, China
+    zh: 上海，中国
   photo: /images/Ray.jpg
   photoAlt:
     en: Profile image of Your Name
     zh: 你的姓名的个人头像
-  email: your-email@example.com
+  email: torchmar@sjtu.edu.cn
   bio:
     en: |
-      Write a concise academic biography here. Introduce your current position,
-      education, research focus, and the questions that motivate your work.
+      This paragraph is under construction.
 
-      Add a second paragraph when you need to describe collaborations,
-      opportunities, or other information for visitors.
+      This is a second paragraph test.
     zh: |
-      请在这里撰写简洁的学术简介，介绍你当前的身份、教育背景、研究方向，
-      以及你希望解决的学术问题。
+      这段文字正在建设中。
 
-      如果需要介绍合作机会、招生信息或其他内容，可以继续添加第二段。
+      这是第二段测试。
   researchInterests:
     en:
-      - Research Interest One
-      - Research Interest Two
-      - Research Interest Three
+      - Large Language Models
+      - Agent
+      - FinTech
     zh:
-      - 研究方向一
-      - 研究方向二
-      - 研究方向三
+      - 大语言模型
+      - 智能体
+      - 金融科技
   links:
     - label:
         en: Blog
@@ -149,44 +146,44 @@ sections:
       zh: 教育经历
     items:
       - period:
-          en: 20XX – Present
-          zh: 20XX – 至今
+          en: 2024 – Present
+          zh: 2024 – 至今
         title:
-          en: Degree and Major
-          zh: 学位与专业
+          en: Finance and Computer Science, Double Major, BSc
+          zh: 金融学与计算机科学双学位
         organization:
-          en: University Name
-          zh: 学校名称
+          en: Shanghai Jiao Tong University, Antai College of Economics and Management
+          zh: 上海交通大学安泰经济与管理学院
         location:
-          en: City, Country
-          zh: 城市，国家
+          en: Shanghai, China
+          zh: 上海，中国
         details:
           en: Add your advisor, honors program, thesis topic, or other relevant details.
           zh: 添加导师、荣誉项目、论文题目或其他相关信息。
         links: []
 
   researchExperience:
-    enabled: false
+    enabled: true
     title:
       en: Research Experience
       zh: 科研经历
     items:
       - period:
-          en: 20XX – Present
-          zh: 20XX – 至今
+          en: 2025 – Present
+          zh: 2025 – 至今
         title:
           en: Research Assistant
           zh: 科研助理
         organization:
-          en: Laboratory or Institution
-          zh: 实验室或机构
+          en: APEX Data & Knowledge Management Lab, Shanghai Jiao Tong University
+          zh: APEX数据与知识管理实验室，上海交通大学
         location:
-          en: City, Country
-          zh: 城市，国家
+          en: Shanghai, China
+          zh: 上海，中国
         details:
           en: Describe the research topic, your responsibilities, and the outcome.
           zh: 描述研究主题、你的职责和研究成果。
-        links: []
+        links: [apex.sjtu.edu.cn]
 
   honors:
     enabled: false
