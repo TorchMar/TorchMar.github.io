@@ -183,7 +183,11 @@ sections:
         details:
           en: Describe the research topic, your responsibilities, and the outcome.
           zh: 描述研究主题、你的职责和研究成果。
-        links: [apex.sjtu.edu.cn]
+        links:
+          - label:
+              en: Lab Website
+              zh: 实验室主页
+            url: https://apex.sjtu.edu.cn/
 
   honors:
     enabled: false
