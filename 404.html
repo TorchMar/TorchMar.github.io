@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-language="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>(()=>{let l='en';try{if(localStorage.getItem('torchmar-academic-language')==='zh')l='zh'}catch{}document.documentElement.dataset.language=l;document.documentElement.lang=l==='zh'?'zh-CN':'en'})()</script>
+  <title>404 | Yuhong Liu | Academic Homepage</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/academic.css">
+  <script>
+    (() => {
+      const path = window.location.pathname
+      const suffix = window.location.search + window.location.hash
+      const legacyRoots = /^\/(about|archives|categories|links|page|posts|tags)(\/|$)/
+      if (legacyRoots.test(path)) {
+        window.location.replace('/blog' + path + suffix)
+        return
+      }
+      if (path.startsWith('/blog/') && path !== '/blog/404') {
+        window.location.replace('/blog/404')
+      }
+    })()
+  </script>
+  <script src="/assets/academic-language.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="/"><span data-lang="en">Yuhong Liu</span><span data-lang="zh">刘昱宏</span></a>
+      <div class="site-nav"></div>
+      <label class="language-control" for="language-select">
+        <span class="language-label"><span data-lang="en">Language</span><span data-lang="zh">语言</span></span>
+        <select id="language-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+        </select>
+      </label>
+    </div>
+  </header>
+  <main class="page-shell not-found">
+    <div class="not-found-card">
+      <h1>404</h1>
+      <p data-lang="en">The page you requested could not be found.</p><p data-lang="zh">没有找到你访问的页面。</p>
+      <div class="not-found-actions">
+        <a href="/"><span data-lang="en">Academic homepage</span><span data-lang="zh">学术主页</span></a>
+        <a href="/blog/"><span data-lang="en">Blog</span><span data-lang="zh">博客</span></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
