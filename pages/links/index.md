@@ -14,7 +14,7 @@ random: true
 我的友链：
 
 ```json
-"url": "https://torchmar.github.io",
+"url": "https://torchmar.github.io/blog",
 "avatar": "https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg",
 "name": "TorchMar's blog",
 "blog": "TorchMar's blog",

@@ -1,6 +1,7 @@
 ---
 title: 《平凡人》的背后，我在想些什么
 date: 2025-9-7
+updated: 2025-9-7
 categories: 随笔散记
 excerpt: 一些碎碎念。
 tags:
@@ -69,7 +70,6 @@ zzy老师说你应该觉得自己厉害，三四天单人产出了将近15min的
 ![](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/024ea75368deadf19654ac34d349cb8a.png)
 
 ![](https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/1b85c12af7d8b5ffec592c7b38871b9b.png)
-
 
 同步更新于微信公众号，也欢迎点开微信公众号阅读本文。
 
