@@ -28,7 +28,7 @@ random: true
 "url": "Your Website URL",
 "avatar": "Your Avatar URL",
 "name": "Your Website Name",
-"blog": "Your Website Namce",
+"blog": "Your Website Name",
 "desc": "Description",
 "color": "You can choose one color to display（Default #0078e7）"
 ```
