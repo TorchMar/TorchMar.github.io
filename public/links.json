@@ -52,5 +52,13 @@
     "url": "https://zzyang.top",
     "desc": "知识管理与技术分享",
     "avatar": "https://www.zzyang.top/favicon/avatar.png"
-    }
+    },
+{
+    "url": "https://qixqwq.link",
+    "avatar": "https://images.qixqwq.link/head.jpg",
+    "name": "Qixqwq's Home",
+    "blog": "Qixqwq's Blog",
+    "desc": "Sarve saṃskārā anityāḥ",
+    "color": "#4D8DB0"
+}
 ]
