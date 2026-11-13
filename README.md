@@ -49,9 +49,29 @@ English is the default language. If a Chinese value is empty, the English value
 is shown as a fallback. Lists are rendered in the same order as the YAML file,
 so add new news and publications where you want them to appear.
 
-The initial file intentionally contains obvious placeholders. Replace them
-before publishing. The current profile image is `/images/Ray.jpg`; replacing
-that file or changing `profile.photo` updates the homepage photo.
+The homepage layout is inspired by [Anleeno Academic](https://github.com/Anleeno/anleeno-academic).
+The profile photo lives at `public/images/Ray.jpg` and is served at `/images/Ray.jpg`.
+
+### Add your academic information
+
+| Information | Where to fill it in |
+| --- | --- |
+| Research topic, supervisor, responsibilities, or results | Add a bilingual `details` field to the relevant item in `sections.researchExperience.items`. Education details can go in `sections.education.items`. |
+| Google Scholar | Set `url` in the existing Google Scholar entry in `profile.links` to your personal Scholar profile URL. |
+| CV | Put the public PDF in `public/downloads/` and set `url` in the existing CV entry in `profile.links` to its path, such as `/downloads/cv.pdf`. |
+| News | Add an item in `sections.recentNews.items` with `date` and bilingual `text`. Add `links` when you have a related announcement. |
+| Publications | Add an item in `sections.publications.items` with `title`, `authors`, `venue`, and `year`. Use `**Your Name**` in `authors` to highlight your name. Add `note` or `links` for the paper, code, or project page as available. |
+| Projects, awards, teaching, service, or talks | Add items in the matching section with `title`. Add `period`, `organization`, `location`, `details`, and `links` as available. |
+
+Each link entry uses `label.en`, `label.zh`, and `url`. For an optional
+publication or project thumbnail, put the image in `public/images/` and set
+the item's `image` to `/images/<filename>` and its `imageAlt` to an `en`/`zh`
+description. After adding a first item to a section, set `enabled: true` to
+show it on the homepage.
+
+An empty `url: ""` in `profile.links` displays a label without a link. An
+enabled section with `items: []` and a bilingual `empty` message shows that
+message until you add an item. News and Publications use this setting.
 
 ## Update the blog
 

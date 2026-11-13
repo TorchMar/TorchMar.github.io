@@ -4,8 +4,8 @@ site:
     en: Yuhong Liu | Academic Homepage
     zh: 刘昱宏 | 学术主页
   description:
-    en: LLM & Agent Researcher.
-    zh: LLM和Agent研究者。
+    en: Shanghai Jiao Tong University undergraduate interested in large language models, AI agents, and FinTech.
+    zh: 上海交通大学本科生，研究兴趣包括大语言模型、智能体和金融科技。
   defaultLanguage: en
 
 profile:
@@ -18,28 +18,24 @@ profile:
     zh: 本科生
   affiliation:
     en: Antai College of Economics and Management, Shanghai Jiao Tong University
-    zh: 安泰经济与管理学院，上海交通大学
+    zh: 上海交通大学安泰经济与管理学院
   location:
     en: Shanghai, China
-    zh: 上海，中国
+    zh: 中国上海
   photo: /images/Ray.jpg
   photoAlt:
-    en: Profile image of Your Name
-    zh: 你的姓名的个人头像
+    en: Yuhong Liu’s profile photo
+    zh: 刘昱宏的头像
   email: torchmar@sjtu.edu.cn
   bio:
     en: |
-      This paragraph is under construction.
-
-      This is a second paragraph test.
+      I study finance and computer science at Shanghai Jiao Tong University, where I am also a research assistant at the APEX Data & Knowledge Management Lab. I work on model distillation.
     zh: |
-      这段文字正在建设中。
-
-      这是第二段测试。
+      我是上海交通大学本科生，学习金融学和计算机科学，也在 APEX 数据与知识管理实验室担任科研助理。目前在做模型蒸馏方面的研究。
   researchInterests:
     en:
       - Large Language Models
-      - Agent
+      - AI Agents
       - FinTech
     zh:
       - 大语言模型
@@ -51,17 +47,17 @@ profile:
         zh: 博客
       url: /blog/
     - label:
-        en: Google Scholar
-        zh: 谷歌学术
-      url: https://scholar.google.com/
-    - label:
         en: GitHub
         zh: GitHub
       url: https://github.com/TorchMar
     - label:
+        en: Google Scholar
+        zh: Google Scholar
+      url: ""
+    - label:
         en: CV
         zh: 简历
-      url: "#"
+      url: ""
 
 sections:
   recentNews:
@@ -69,75 +65,20 @@ sections:
     title:
       en: Recent News
       zh: 近期动态
-    items:
-      - date: YYYY.MM
-        text:
-          en: Replace this item with your latest academic update.
-          zh: 请将此条替换为你最近的学术动态。
-        links:
-          - label:
-              en: More
-              zh: 详情
-            url: "#"
-      - date: YYYY.MM
-        text:
-          en: Add another announcement, milestone, award, or paper update here.
-          zh: 在这里添加另一条公告、里程碑、获奖或论文动态。
-        links: []
+    empty:
+      en: No updates yet.
+      zh: 暂无动态。
+    items: []
 
   publications:
     enabled: true
     title:
       en: Publications
       zh: 论文发表
-    intro:
-      en: Replace the sample entries below with your publications.
-      zh: 请将以下示例替换为你的论文。
-    items:
-      - title:
-          en: Title of Your Paper
-          zh: 你的论文标题
-        authors:
-          en: "**Your Name**, Coauthor One, Coauthor Two"
-          zh: "**你的姓名**、合作者一、合作者二"
-        venue:
-          en: Conference or Journal Name
-          zh: 会议或期刊名称
-        year: "20XX"
-        note:
-          en: Optional distinction, status, or short note.
-          zh: 可选的奖项、状态或简短说明。
-        links:
-          - label:
-              en: Paper
-              zh: 论文
-            url: "#"
-          - label:
-              en: Code
-              zh: 代码
-            url: "#"
-          - label:
-              en: Project
-              zh: 项目
-            url: "#"
-      - title:
-          en: Title of Another Paper
-          zh: 另一篇论文标题
-        authors:
-          en: Coauthor One, **Your Name**, Coauthor Two
-          zh: 合作者一、**你的姓名**、合作者二
-        venue:
-          en: arXiv preprint
-          zh: arXiv 预印本
-        year: "20XX"
-        note:
-          en: ""
-          zh: ""
-        links:
-          - label:
-              en: arXiv
-              zh: arXiv
-            url: "#"
+    empty:
+      en: No publications listed yet.
+      zh: 暂无论文条目。
+    items: []
 
   education:
     enabled: true
@@ -146,20 +87,17 @@ sections:
       zh: 教育经历
     items:
       - period:
-          en: 2024 – Present
-          zh: 2024 – 至今
+          en: Sep 2024 – Jun 2028 (expected)
+          zh: 2024.09 – 2028.06（预计）
         title:
-          en: Finance and Computer Science, Double Major, BSc
+          en: Dual Bachelor’s Degrees in Computer Science and Finance
           zh: 金融学与计算机科学双学位
         organization:
           en: Shanghai Jiao Tong University, Antai College of Economics and Management
           zh: 上海交通大学安泰经济与管理学院
         location:
           en: Shanghai, China
-          zh: 上海，中国
-        details:
-          en: Add your advisor, honors program, thesis topic, or other relevant details.
-          zh: 添加导师、荣誉项目、论文题目或其他相关信息。
+          zh: 中国上海
         links: []
 
   researchExperience:
@@ -169,20 +107,22 @@ sections:
       zh: 科研经历
     items:
       - period:
-          en: 2025 – Present
-          zh: 2025 – 至今
+          en: Sep 2025 – Present
+          zh: 2025.09 – 至今
         title:
           en: Research Assistant
           zh: 科研助理
         organization:
           en: APEX Data & Knowledge Management Lab, Shanghai Jiao Tong University
-          zh: APEX数据与知识管理实验室，上海交通大学
+          zh: 上海交通大学 APEX 数据与知识管理实验室
         location:
           en: Shanghai, China
-          zh: 上海，中国
+          zh: 中国上海
         details:
-          en: Describe the research topic, your responsibilities, and the outcome.
-          zh: 描述研究主题、你的职责和研究成果。
+          en: |
+            Supervised by [Jianghao Lin](https://acem.sjtu.edu.cn/faculty/linjianghao.html) and [Weinan Zhang](https://www.cs.sjtu.edu.cn/jiaoshiml/zhangweinan.html). I explore LLM post-training to improve the capabilities and efficiency of LLM-based agents.
+          zh: |
+            导师为[林江浩助理教授](https://acem.sjtu.edu.cn/faculty/linjianghao.html)和[张伟楠教授](https://www.cs.sjtu.edu.cn/jiaoshiml/zhangweinan.html)。研究如何通过大语言模型后训练提升智能体的能力与效率。
         links:
           - label:
               en: Lab Website
@@ -190,128 +130,68 @@ sections:
             url: https://apex.sjtu.edu.cn/
 
   honors:
-    enabled: false
+    enabled: true
     title:
       en: Honors & Awards
       zh: 荣誉与奖项
     items:
-      - period:
-          en: 20XX
-          zh: 20XX
+      - period: "2025"
         title:
-          en: Name of Honor or Award
-          zh: 荣誉或奖项名称
+          en: Guo Xie Birong Scholarship
+          zh: 郭谢碧蓉奖学金
         organization:
-          en: Awarding Organization
-          zh: 授予机构
-        location:
-          en: ""
-          zh: ""
+          en: Shanghai Jiao Tong University
+          zh: 上海交通大学
         details:
-          en: Add a short description or selectivity when useful.
-          zh: 可补充简短说明或获奖比例。
-        links: []
+          en: University-level merit award (top 10%).
+          zh: 校级奖学金（前 10%）。
+      - period: "2025"
+        title:
+          en: First Prize, “Zhixiang Cup” Shanghai University Student Data Analysis Case Competition
+          zh: 「智享杯」上海市高校经管类大学生数据分析案例大赛一等奖
+        details:
+          en: 'Top 5%. Project: Machine Learning-Based Prediction of Environmental Risks in Listed Companies.'
+          zh: 前 5%。参赛项目为基于机器学习的上市公司环境风险预测。
 
   projects:
-    enabled: false
+    enabled: true
     title:
       en: Projects
       zh: 项目经历
     items:
-      - period:
-          en: 20XX
-          zh: 20XX
-        title:
-          en: Project Title
-          zh: 项目名称
+      - title:
+          en: LLM-Based Corporate Culture Identification and Characterization
+          zh: 基于大语言模型的企业文化识别与表征
         organization:
-          en: Your Role or Course
-          zh: 你的角色或课程
-        location:
-          en: ""
-          zh: ""
+          en: 47th SJTU Undergraduate Research Program (PRP)
+          zh: 上海交通大学第 47 期本科生研究计划（PRP）
         details:
-          en: Explain the project goal, method, and result in one or two sentences.
-          zh: 用一到两句话说明项目目标、方法和结果。
-        links:
-          - label:
-              en: Project
-              zh: 项目
-            url: "#"
-          - label:
-              en: Code
-              zh: 代码
-            url: "#"
+          en: |
+            Built a pipeline using DeepSeek to extract and quantify corporate culture from 1,381 annual reports. Evaluated model reliability through cross-model validation and ablation studies, and built causal knowledge graphs for structured reasoning.
+
+            Received the university-level Outstanding Project Award (top 15%).
+          zh: |
+            使用 DeepSeek 从 1,381 份年报中提取并量化企业文化。通过跨模型验证和消融实验评估模型可靠性，并构建因果知识图谱用于结构化推理。
+
+            获校级优秀项目奖（前 15%）。
 
   teaching:
     enabled: false
     title:
       en: Teaching
       zh: 教学经历
-    items:
-      - period:
-          en: Term 20XX
-          zh: 20XX 学期
-        title:
-          en: Course Title
-          zh: 课程名称
-        organization:
-          en: Teaching Assistant
-          zh: 助教
-        location:
-          en: Institution Name
-          zh: 学校或机构名称
-        details:
-          en: Add the course number and your teaching responsibilities.
-          zh: 添加课程编号和你的教学职责。
-        links: []
+    items: []
 
   academicService:
     enabled: false
     title:
       en: Academic Service
       zh: 学术服务
-    items:
-      - period:
-          en: 20XX
-          zh: 20XX
-        title:
-          en: Reviewer or Committee Role
-          zh: 审稿或委员会职务
-        organization:
-          en: Conference, Journal, or Organization
-          zh: 会议、期刊或组织
-        location:
-          en: ""
-          zh: ""
-        details:
-          en: Add optional details about the service.
-          zh: 添加有关该学术服务的可选说明。
-        links: []
+    items: []
 
   talks:
     enabled: false
     title:
       en: Talks
       zh: 学术报告
-    items:
-      - period:
-          en: YYYY.MM
-          zh: YYYY.MM
-        title:
-          en: Title of Your Talk
-          zh: 报告题目
-        organization:
-          en: Host Organization or Event
-          zh: 主办机构或活动
-        location:
-          en: City or Online
-          zh: 城市或线上
-        details:
-          en: Add a one-sentence description of the talk.
-          zh: 添加一句话的报告简介。
-        links:
-          - label:
-              en: Slides
-              zh: 幻灯片
-            url: "#"
+    items: []

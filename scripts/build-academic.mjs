@@ -16,8 +16,8 @@ const directoryAliasMarker = '<!-- generated directory alias -->'
 const sectionOrder = [
   'recentNews',
   'publications',
-  'education',
   'researchExperience',
+  'education',
   'honors',
   'projects',
   'teaching',
@@ -145,6 +145,10 @@ function renderLinks(links, className = 'entry-links') {
 
   const rendered = links.map((link) => {
     invariant(isObject(link), 'each link must be an object')
+    if (className === 'profile-links' && link.url === '') {
+      const label = localizedPair(link.label)
+      return `<span class="profile-link-placeholder">${renderLocalized({ en: `${label.en} · Unavailable`, zh: `${label.zh} · 暂无` })}</span>`
+    }
     const url = safeUrl(link.url)
     return `<a href="${escapeHtml(url)}"${linkAttributes(url)}>${renderLocalized(link.label)}</a>`
   }).join('')
@@ -154,6 +158,9 @@ function renderLinks(links, className = 'entry-links') {
 
 function renderInterests(interests) {
   const values = localizedArrays(interests)
+  if (values.en.length === 0 && values.zh.length === 0)
+    return ''
+
   return ['en', 'zh'].map((language) => {
     const items = values[language].map(item => `<li>${escapeHtml(item)}</li>`).join('')
     return `<ul class="interests" data-lang="${language}">${items}</ul>`
@@ -173,25 +180,41 @@ function renderProfile(profile) {
 
   return `
     <section class="profile" id="profile" aria-labelledby="profile-name">
-      <div class="profile-copy">
-        <h1 id="profile-name">${renderLocalized(profile.name)}</h1>
-        ${renderLocalized(profile.role, { tag: 'p', className: 'profile-role' })}
-        ${renderLocalized(profile.affiliation, { tag: 'p', className: 'profile-affiliation' })}
-        ${renderLocalized(profile.location, { tag: 'p', className: 'profile-location' })}
-        ${renderLocalized(profile.bio, { tag: 'div', className: 'profile-bio', markdownMode: 'block' })}
-        ${renderInterests(profile.researchInterests)}
-        ${emailLink}
-        ${renderLinks(profile.links, 'profile-links')}
-      </div>
       <img
         class="profile-photo"
         src="${escapeHtml(photo)}"
         alt="${escapeHtml(alt.en)}"
         data-alt-en="${escapeHtml(alt.en)}"
         data-alt-zh="${escapeHtml(alt.zh)}"
-        width="190"
-        height="190"
+        width="600"
+        height="600"
+        fetchpriority="high"
       >
+      <div class="profile-copy">
+        <h1 id="profile-name">${renderLocalized(profile.name)}</h1>
+        ${renderLocalized(profile.role, { tag: 'p', className: 'profile-role' })}
+        ${renderLocalized(profile.affiliation, { tag: 'p', className: 'profile-affiliation' })}
+        ${renderLocalized(profile.location, { tag: 'p', className: 'profile-location' })}
+        ${emailLink}
+        ${renderLinks(profile.links, 'profile-links')}
+      </div>
+    </section>`
+}
+
+function renderAbout(profile) {
+  if (!profile.enabled)
+    return ''
+
+  const interests = renderInterests(profile.researchInterests)
+  return `
+    <section class="about content-section" id="about" aria-labelledby="about-title">
+      <h2 class="section-heading visually-hidden" id="about-title">${renderLocalized({ en: 'About', zh: '关于' })}</h2>
+      ${renderLocalized(profile.bio, { tag: 'div', className: 'profile-bio', markdownMode: 'block' })}
+      ${interests ? `
+        <div class="research-focus">
+          ${renderLocalized({ en: 'Research interests', zh: '研究兴趣' }, { tag: 'p', className: 'research-focus-title' })}
+          ${interests}
+        </div>` : ''}
     </section>`
 }
 
@@ -219,6 +242,15 @@ function renderNews(section) {
     </section>`
 }
 
+function renderEntryImage(item, className) {
+  if (!item.image)
+    return ''
+
+  const url = safeUrl(item.image)
+  const alt = localizedPair(item.imageAlt)
+  return `<img class="${className}" src="${escapeHtml(url)}" alt="${escapeHtml(alt.en)}" data-alt-en="${escapeHtml(alt.en)}" data-alt-zh="${escapeHtml(alt.zh)}" loading="lazy" decoding="async">`
+}
+
 function renderPublications(section) {
   const intro = section.intro
     ? renderLocalized(section.intro, { tag: 'div', className: 'section-intro', markdownMode: 'block' })
@@ -236,11 +268,14 @@ function renderPublications(section) {
 
     return `
       <li class="publication-item">
-        ${renderLocalized(item.title, { tag: 'h3', className: 'publication-title', markdownMode: 'inline' })}
-        ${renderLocalized(item.authors, { tag: 'div', className: 'publication-authors', markdownMode: 'block' })}
-        ${renderLocalized(venueWithYear, { tag: 'p', className: 'publication-venue' })}
-        ${noteHtml}
-        ${renderLinks(item.links)}
+        ${renderEntryImage(item, 'publication-image')}
+        <div class="publication-content">
+          ${renderLocalized(venueWithYear, { tag: 'p', className: 'publication-venue' })}
+          ${renderLocalized(item.title, { tag: 'h3', className: 'publication-title', markdownMode: 'inline' })}
+          ${renderLocalized(item.authors, { tag: 'div', className: 'publication-authors', markdownMode: 'block' })}
+          ${noteHtml}
+          ${renderLinks(item.links)}
+        </div>
       </li>`
   }).join('')
 
@@ -253,7 +288,11 @@ function renderPublications(section) {
 }
 
 function renderTimelineSection(key, section) {
-  const id = key.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`)
+  const id = sectionId(key)
+  const education = key === 'education'
+  const projects = key === 'projects'
+  const itemClass = projects ? 'project-item' : education ? 'education-item' : 'timeline-item'
+  const listClass = projects ? 'project-list' : education ? 'education-list' : 'timeline-list'
   const intro = section.intro
     ? renderLocalized(section.intro, { tag: 'div', className: 'section-intro', markdownMode: 'block' })
     : ''
@@ -265,15 +304,28 @@ function renderTimelineSection(key, section) {
       en: [organization.en, location.en].filter(Boolean).join(' · '),
       zh: [organization.zh, location.zh].filter(Boolean).join(' · '),
     }
+    const period = item.period
+      ? renderLocalized(item.period, { tag: 'div', className: 'timeline-period' })
+      : ''
+    const organizationHtml = organizationLine.en || organizationLine.zh
+      ? renderLocalized(organizationLine, { tag: 'p', className: 'entry-organization' })
+      : ''
+    const details = item.details
+      ? renderLocalized(item.details, { tag: 'div', className: 'entry-details', markdownMode: 'block' })
+      : ''
+
     return `
-      <li class="timeline-item">
-        ${renderLocalized(item.period, { tag: 'div', className: 'timeline-period' })}
-        <div class="timeline-content">
+      <li class="${itemClass}">
+        ${projects ? renderEntryImage(item, 'project-image') : ''}
+        ${!education && !projects ? period : ''}
+        <div class="${projects ? 'project-content' : 'timeline-content'}">
+          ${projects ? period : ''}
           ${renderLocalized(item.title, { tag: 'h3', className: 'timeline-title', markdownMode: 'inline' })}
-          ${renderLocalized(organizationLine, { tag: 'p', className: 'entry-organization' })}
-          ${renderLocalized(item.details, { tag: 'div', className: 'entry-details', markdownMode: 'block' })}
+          ${organizationHtml}
+          ${details}
           ${renderLinks(item.links)}
         </div>
+        ${education ? period : ''}
       </li>`
   }).join('')
 
@@ -281,13 +333,21 @@ function renderTimelineSection(key, section) {
     <section class="content-section" id="${escapeHtml(id)}" aria-labelledby="${escapeHtml(id)}-title">
       ${sectionHeading(section, id)}
       ${intro}
-      <ul class="timeline-list">${items}</ul>
+      <ul class="${listClass}">${items}</ul>
     </section>`
 }
 
 function renderSection(key, section) {
   if (!section.enabled)
     return ''
+  if (section.items.length === 0) {
+    const id = sectionId(key)
+    return `
+      <section class="content-section" id="${id}" aria-labelledby="${id}-title">
+        ${sectionHeading(section, id)}
+        ${renderLocalized(section.empty, { tag: 'p', className: 'section-intro' })}
+      </section>`
+  }
   if (key === 'recentNews')
     return renderNews(section)
   if (key === 'publications')
@@ -304,14 +364,14 @@ function sectionId(key) {
 }
 
 function renderNavigation(profile, sections) {
-  const profileLink = profile.enabled
-    ? `<a href="#profile">${renderLocalized({ en: 'Home', zh: '主页' })}</a>`
+  const aboutLink = profile.enabled
+    ? `<a href="#about">${renderLocalized({ en: 'About', zh: '关于' })}</a>`
     : ''
   const sectionLinks = sectionOrder
     .filter(key => sections[key].enabled)
     .map(key => `<a href="#${sectionId(key)}">${renderLocalized(sections[key].title)}</a>`)
     .join('')
-  return `${profileLink}${sectionLinks}<a href="/blog/">${renderLocalized({ en: 'Blog', zh: '博客' })}</a>`
+  return `${aboutLink}${sectionLinks}<a href="/blog/">${renderLocalized({ en: 'Blog', zh: '博客' })}</a>`
 }
 
 function validateContent(content) {
@@ -334,8 +394,8 @@ function validateContent(content) {
     invariant(typeof section.enabled === 'boolean', `sections.${key}.enabled must be true or false`)
     invariant(section.title, `sections.${key}.title is required`)
     invariant(Array.isArray(section.items), `sections.${key}.items must be an array`)
-    if (section.enabled)
-      invariant(section.items.length > 0, `enabled section sections.${key} must contain at least one item`)
+    if (section.enabled && section.items.length === 0)
+      invariant(String(localizedValue(section.empty, 'en')).trim(), `enabled section sections.${key} must contain items or an empty-state message`)
   }
 }
 
@@ -388,12 +448,16 @@ function renderIndex(content) {
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>
   <script src="/assets/academic-language.js" defer></script>
 </head>
-<body>
+<body class="homepage" id="top">
   <a class="skip-link" href="#main">${renderLocalized({ en: 'Skip to content', zh: '跳转到正文' })}</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="site-name" href="/">${renderLocalized(siteName)}</a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-name" href="#top">${renderLocalized(siteName)}</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+        ${renderLocalized({ en: 'Menu', zh: '菜单' })}
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         ${renderNavigation(profile, sections)}
       </nav>
       <label class="language-control" for="language-select">
@@ -405,16 +469,23 @@ function renderIndex(content) {
       </label>
     </div>
   </header>
-  <main class="page-shell" id="main">
+  <main class="page-shell${profile.enabled ? ' has-profile' : ''}" id="main" tabindex="-1">
     ${renderProfile(profile)}
-    ${renderedSections}
+    <div class="main-content">
+      ${renderAbout(profile)}
+      ${renderedSections}
+    </div>
   </main>
   <footer class="site-footer">
     ${renderLocalized({
-      en: `© ${new Date().getFullYear()} ${localizedValue(profile.name, 'en')}. Built as a static academic homepage.`,
-      zh: `© ${new Date().getFullYear()} ${localizedValue(profile.name, 'zh')}。静态学术主页。`,
+      en: `© ${new Date().getFullYear()} ${localizedValue(profile.name, 'en')}`,
+      zh: `© ${new Date().getFullYear()} ${localizedValue(profile.name, 'zh')}`,
     })}
   </footer>
+  <a class="back-to-top" href="#top" hidden>
+    <span aria-hidden="true">↑</span>
+    ${renderLocalized({ en: 'Back to top', zh: '返回顶部' }, { className: 'visually-hidden' })}
+  </a>
 </body>
 </html>
 `
