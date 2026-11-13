@@ -15,7 +15,7 @@ random: true
 
 ```json
 "url": "https://torchmar.github.io/blog",
-"avatar": "https://cdn.jsdelivr.net/gh/TorchMar/ImgHostServer@main/Ray.jpg",
+"avatar": "https://torchmar.github.io/images/torchmar-avatar.png",
 "name": "TorchMar's blog",
 "blog": "TorchMar's blog",
 "desc": "Here is what I am thinking",

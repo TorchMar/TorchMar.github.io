@@ -7,7 +7,7 @@ export default defineSiteConfig({
   subtitle:'Here is what I am thinking',
   author: {
     name: 'TorchMar',
-    avatar:"https://torchmar.github.io/images/Ray.jpg",
+    avatar:"https://torchmar.github.io/images/torchmar-avatar.png",
     status: {
       emoji: '💛' // 头像旁边的emoji
     },
