@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 | Yuhong Liu · Academic</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/images/favicon.ico">
+  <style>
+    body {
+      display: grid;
+      min-height: 100svh;
+      margin: 0;
+      padding: 24px;
+      box-sizing: border-box;
+      place-items: center;
+      font: 16px/1.6 system-ui, sans-serif;
+      color: #212529;
+      text-align: center;
+    }
+    h1 { margin: 0; font-size: 3rem; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+    a { color: #514c8a; }
+  </style>
+  <script>
+    (() => {
+      const path = window.location.pathname
+      const suffix = window.location.search + window.location.hash
+      const legacyRoots = /^\/(about|archives|categories|links|page|posts|tags)(\/|$)/
+      if (legacyRoots.test(path)) {
+        window.location.replace('/blog' + path + suffix)
+        return
+      }
+      if (path.startsWith('/blog/') && path !== '/blog/404') {
+        window.location.replace('/blog/404')
+      }
+    })()
+  </script>
+</head>
+<body>
+  <main>
+    <h1>404</h1>
+    <p>The page you requested could not be found.</p>
+    <nav aria-label="Main navigation">
+      <a href="/">Academic homepage</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </main>
+</body>
+</html>
