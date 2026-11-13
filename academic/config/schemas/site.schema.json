@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$defs": {
+    "recommendations": {
+      "type": "object", "additionalProperties": false,
+      "required": ["enabled", "endpoint", "limit", "cacheMinutes"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "daily": {
+          "type": "object", "additionalProperties": false,
+          "required": ["enabled", "limit", "keywords"],
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "limit": { "type": "integer", "minimum": 1, "maximum": 6 },
+            "cacheMinutes": { "type": "integer", "minimum": 15, "maximum": 1440 },
+            "keywords": { "type": "array", "minItems": 1, "maxItems": 5, "uniqueItems": true, "items": { "type": "string", "minLength": 2, "maxLength": 100 } }
+          }
+        },
+        "endpoint": { "type": "string", "pattern": "^(https://[^\\s]+)?$" },
+        "limit": { "type": "integer", "minimum": 1, "maximum": 6 },
+        "cacheMinutes": { "type": "integer", "minimum": 15, "maximum": 1440 }
+      }
+    },
+    "site": {
+      "type": "object", "additionalProperties": false,
+      "required": ["title", "description", "language", "copyrightName"],
+      "properties": {
+        "title": { "$ref": "#/$defs/text" },
+        "description": { "$ref": "#/$defs/text" },
+        "language": { "type": "string", "pattern": "^[a-zA-Z]{2,8}(-[a-zA-Z0-9]{1,8})*$" },
+        "copyrightName": { "$ref": "#/$defs/text" }
+      }
+    },
+    "text": { "type": "string", "minLength": 1 },
+    "asset": { "type": "string", "pattern": "^assets/[^\\\\]+$" },
+    "link": { "type": "string", "pattern": "^(https?://|mailto:|/|#)" },
+    "segment": {
+      "type": "object", "additionalProperties": false, "required": ["text"],
+      "properties": { "text": { "$ref": "#/$defs/text" }, "strong": { "type": "boolean" }, "href": { "$ref": "#/$defs/link" } }
+    },
+    "segments": { "type": "array", "items": { "$ref": "#/$defs/segment" } },
+    "hero": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "title", "profileImage", "brandLogo", "descriptions", "primaryLinks", "socialLinks"],
+      "properties": {
+        "name": { "$ref": "#/$defs/text" }, "title": { "$ref": "#/$defs/text" },
+        "profileImage": { "$ref": "#/$defs/asset" }, "brandLogo": { "$ref": "#/$defs/asset" },
+        "descriptions": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["icon", "text"],
+          "properties": { "icon": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } }
+        } },
+        "primaryLinks": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["label"],
+          "properties": { "label": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/link" }, "asset": { "$ref": "#/$defs/asset" }, "preview": { "enum": ["pdf"], "description": "Open this link in the custom PDF preview dialog." } },
+          "oneOf": [{ "required": ["url"] }, { "required": ["asset"] }]
+        } },
+        "socialLinks": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["label", "icon", "url"],
+          "properties": { "label": { "$ref": "#/$defs/text" }, "icon": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/link" } }
+        } }
+      }
+    },
+    "about": {
+      "type": "object", "additionalProperties": false, "required": ["paragraphs"],
+      "properties": {
+        "paragraphs": { "type": "array", "items": { "$ref": "#/$defs/segments" } },
+        "quote": { "type": "object", "additionalProperties": false, "required": ["text", "author"], "properties": { "text": { "$ref": "#/$defs/text" }, "author": { "$ref": "#/$defs/text" } } }
+      }
+    },
+    "news": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["date", "segments"],
+      "properties": { "date": { "$ref": "#/$defs/text" }, "segments": { "$ref": "#/$defs/segments" } }
+    } },
+    "publications": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "image", "authors", "venue", "tags", "link", "citation"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "$ref": "#/$defs/text" }, "image": { "$ref": "#/$defs/asset" }, "abstract": { "type": "string" },
+        "authors": { "$ref": "#/$defs/segments" }, "venue": { "$ref": "#/$defs/text" },
+        "venueType": { "enum": ["conference", "journal", "preprint", "workshop"] }, "ccf": { "$ref": "#/$defs/text" },
+        "tags": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+        "link": { "$ref": "#/$defs/link" }, "pdfUrl": { "type": "string", "pattern": "^https?://", "description": "Optional CORS-enabled remote PDF URL for the paper reader." }, "citation": { "$ref": "#/$defs/text" },
+        "authorTag": { "type": "object", "additionalProperties": false, "required": ["label", "type"], "properties": { "label": { "$ref": "#/$defs/text" }, "type": { "$ref": "#/$defs/text" } } }
+      }
+    } },
+    "experience": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["organization", "logo", "period", "location", "role", "details"],
+      "properties": {
+        "organization": { "$ref": "#/$defs/text" }, "logo": { "$ref": "#/$defs/asset" }, "period": { "$ref": "#/$defs/text" }, "location": { "$ref": "#/$defs/text" }, "role": { "$ref": "#/$defs/text" },
+        "details": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["label", "text"], "properties": { "label": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } } } }
+      }
+    } },
+    "projects": { "type": "array", "items": {
+      "type": "object", "additionalProperties": false, "required": ["title", "image", "meta", "text", "action"],
+      "properties": {
+        "title": { "$ref": "#/$defs/text" }, "image": { "$ref": "#/$defs/asset" }, "video": { "$ref": "#/$defs/asset" },
+        "meta": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" }, "note": { "$ref": "#/$defs/text" },
+        "action": { "enum": ["app", "github", "demo"] }, "link": { "$ref": "#/$defs/link" }
+      }
+    } },
+    "education": {
+      "type": "object", "additionalProperties": false, "required": ["enabled", "items"],
+      "properties": { "enabled": { "type": "boolean" }, "items": { "type": "array", "items": {
+        "type": "object", "additionalProperties": false, "required": ["institution"],
+        "properties": { "institution": { "$ref": "#/$defs/text" }, "degree": { "type": "string" }, "field": { "type": "string" }, "period": { "type": "string" }, "location": { "type": "string" }, "description": { "type": "string" } }
+      } } }
+    },
+    "awards": {
+      "type": "object", "additionalProperties": false, "required": ["enabled", "items"],
+      "properties": { "enabled": { "type": "boolean" }, "items": { "type": "array", "items": {
+        "type": "object", "additionalProperties": false, "required": ["title"],
+        "properties": { "title": { "$ref": "#/$defs/text" }, "organization": { "type": "string" }, "year": { "type": "string" }, "description": { "type": "string" } }
+      } } }
+    },
+    "theme": { "type": "object", "minProperties": 1, "propertyNames": { "pattern": "^--theme-[a-z-]+$" }, "additionalProperties": { "$ref": "#/$defs/text" } },
+    "metric": {
+      "type": "object", "additionalProperties": false, "required": ["label", "value"],
+      "properties": {
+        "label": { "$ref": "#/$defs/text" }, "value": { "type": "string", "pattern": "^[0-9]+(?:\\.[0-9]+)?%?$" },
+        "secondary": { "type": "string", "pattern": "^[0-9]+(?:\\.[0-9]+)?$" },
+        "reference": { "type": "string", "pattern": "^[0-9]+(?:\\.[0-9]+)?$" },
+        "referenceLabel": { "$ref": "#/$defs/text" }, "rank": { "$ref": "#/$defs/text" }, "highlighted": { "type": "boolean" }
+      }
+    },
+    "previews": { "type": "object", "additionalProperties": {
+      "type": "object", "additionalProperties": false,
+      "anyOf": [{ "required": ["template"] }, { "required": ["layout"] }],
+      "properties": {
+        "template": { "enum": ["basic", "narrative", "comparison", "budget", "challenge"], "description": "Fixed preview template: abstract, illustrated narrative, comparison, budget curves, or challenge ranking." },
+        "layout": { "enum": ["basic", "narrative", "comparison", "budget", "challenge"], "description": "Legacy alias for template. Prefer template for new entries." },
+        "abstractExpanded": { "type": "boolean", "description": "Open the original abstract on first viewing. Defaults to true for basic, false otherwise." },
+        "blendFigureBackground": { "type": "boolean", "default": true, "description": "Fade near-white pixels in the method figure to blend into the glass surface." },
+        "labels": { "type": "object", "additionalProperties": false, "properties": {
+          "idea": { "$ref": "#/$defs/text" }, "method": { "$ref": "#/$defs/text" }, "results": { "$ref": "#/$defs/text" },
+          "abstract": { "$ref": "#/$defs/text" }, "entry": { "$ref": "#/$defs/text" }, "reference": { "$ref": "#/$defs/text" },
+          "ranking": { "$ref": "#/$defs/text" }, "groups": { "$ref": "#/$defs/text" }, "groupTitle": { "$ref": "#/$defs/text" }
+        } },
+        "name": { "$ref": "#/$defs/text" }, "takeaway": { "$ref": "#/$defs/text" }, "intro": { "$ref": "#/$defs/text" },
+        "highlight": { "$ref": "#/$defs/text" }, "highlightLabel": { "$ref": "#/$defs/text" }, "highlightContext": { "$ref": "#/$defs/text" },
+        "category": { "$ref": "#/$defs/text" }, "headline": { "$ref": "#/$defs/text" }, "method": { "$ref": "#/$defs/text" },
+        "figure": { "$ref": "#/$defs/asset" }, "figureCaption": { "$ref": "#/$defs/text" },
+        "steps": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["title", "text"], "properties": { "title": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } } } },
+        "resultTitle": { "$ref": "#/$defs/text" }, "resultNote": { "$ref": "#/$defs/text" },
+        "rows": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/metric" } },
+        "ablationRows": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/metric" } },
+        "source": { "$ref": "#/$defs/link" }, "sourceLabel": { "$ref": "#/$defs/text" }, "footnote": { "$ref": "#/$defs/text" },
+        "openingLabel": { "$ref": "#/$defs/text" }, "chartTitle": { "$ref": "#/$defs/text" }, "metricTitle": { "$ref": "#/$defs/text" }, "taskCaption": { "$ref": "#/$defs/text" }
+      }
+    } }
+  }
+}

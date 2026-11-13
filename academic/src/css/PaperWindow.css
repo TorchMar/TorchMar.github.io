@@ -1,0 +1,26 @@
+/* Keep the paper overview and reader aligned when switching between them. */
+dialog.research-preview,
+dialog.resume-preview.paper-pdf-preview {
+  width: min(820px, calc(100vw - 48px));
+  height: 88dvh;
+  max-height: 1080px;
+  max-width: none;
+  margin: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 720px) {
+  dialog.research-preview,
+  dialog.resume-preview.paper-pdf-preview {
+    width: calc(100vw - 32px);
+    height: 86dvh;
+    max-height: calc(100dvh - 48px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    border-radius: 14px;
+  }
+}
+
+dialog.research-preview:focus,
+dialog.resume-preview:focus { outline: none; }
+
+.research-scroll,
+.resume-viewport { overscroll-behavior: none; }

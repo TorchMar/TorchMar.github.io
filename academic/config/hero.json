@@ -1,0 +1,11 @@
+{
+  "name": "TorchMar",
+  "title": "Academic Homepage",
+  "profileImage": "assets/profile-placeholder.svg",
+  "brandLogo": "assets/torchmar-logo.svg",
+  "descriptions": [],
+  "primaryLinks": [
+    { "label": "Blog", "url": "/blog/" }
+  ],
+  "socialLinks": []
+}

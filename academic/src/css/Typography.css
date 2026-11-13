@@ -1,0 +1,10 @@
+strong{
+    color: var(--theme-text-color);
+}
+.card-title{
+    color: var(--theme-text-color);
+    font-weight: bolder;
+    font-size: 1.4rem;
+    font-family: 'Sigmar One', serif;
+    /*margin-top: 1rem;*/
+}

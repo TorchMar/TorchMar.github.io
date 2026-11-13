@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "endpoint": "",
+  "limit": 4,
+  "cacheMinutes": 30
+}

@@ -1,0 +1,97 @@
+.profile-pic{
+    display: block;
+    width: 88%;
+    height: auto;
+    margin: 0 auto;
+}
+.hero-grid{
+}
+
+@media (max-width: 1100px) {
+    .profile-pic{
+        width: min(58%, 235px);
+        margin-top: 3rem;
+    }
+
+    .meta-description {
+        width: 100%;
+    }
+
+    .meta-description-row {
+        justify-content: center;
+    }
+}
+
+.hero-meta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.meta-name{
+    font-weight: 900;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.meta-description{
+    display: grid;
+    gap: 0.42rem;
+    margin: 1rem 0;
+    font-size: 0.82rem;
+    color: #acacac;
+}
+
+.meta-description-row {
+    display: flex;
+    align-items: center;
+    gap: 0.48rem;
+    line-height: 1.35;
+}
+
+.meta-description-row svg {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 auto;
+    color: var(--theme-text-color);
+    stroke-width: 1.8;
+}
+.meta-linkitem{
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    background-color: var(--theme-color-surface);
+    border-radius: 8px;
+    padding: 4px 12px;
+    color: var(--theme-text-color);
+    font-family: 'Sigmar One', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+}
+
+.contact-small{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 1rem;
+}
+.meta-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon-link{
+    font-size: 1.4rem;
+    color: var(--theme-text-color);
+}
+.small-text{
+    color: #acacac;
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-style: italic;
+}

@@ -1,0 +1,116 @@
+.resume-preview { box-sizing: border-box; width: min(880px, calc(100vw - 48px)); height: 92dvh; max-width: none; max-height: 1200px; padding: 0; margin: auto; overflow: hidden; border: 1px solid #ffffffb3; border-radius: 10px; background: rgb(249 250 253 / 88%); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 24px 80px #1b23402b; color: #303747; font: 13px/1.5 Arial, sans-serif; text-align: left; }
+.resume-preview[open] { display: flex; flex-direction: column; }
+.resume-preview::backdrop { background: #25283740; }
+/* The paper overview beneath this reader already supplies the page dimming. */
+.resume-preview.paper-pdf-preview::backdrop { background: transparent; }
+.resume-preview.paper-pdf-preview.standalone-pdf-preview::backdrop { background: #25283738; }
+.resume-preview * { box-sizing: border-box; }
+.resume-preview button, .resume-preview a { font: inherit; color: var(--theme-text-color); }
+.resume-preview button, .resume-actions a { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; padding: 7px; border: 0; border-radius: 5px; background: transparent; cursor: pointer; text-decoration: none; }
+.resume-preview button::before, .resume-preview a::before { content: none; }
+.resume-preview button:hover:not(:disabled), .resume-actions a:hover { background: #58609b0b; }
+.resume-preview button:disabled { opacity: .3; cursor: default; }
+.resume-preview :is(button,a,[tabindex]):focus-visible { outline: 2px solid var(--theme-color-soft); outline-offset: 1px; }
+.resume-preview button:focus:not(:focus-visible) { outline: none; }
+.resume-preview svg { width: 17px; height: 17px; flex-shrink: 0; stroke-width: 1.5; }
+.resume-heading { position: relative; inset: auto; width: 100%; height: auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; padding: 10px 16px; min-height: 56px; flex-shrink: 0; border-bottom: 1px solid #58609b12; background: #ffffff65; }
+.resume-heading .resume-accessible-title { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.resume-actions, .resume-window-actions, .resume-pagination, .resume-zoom { display: flex; align-items: center; gap: 4px; }
+.resume-window-actions { justify-self: end; }
+.resume-document-icon { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; color: var(--theme-text-color); }
+.resume-document-icon svg { width: 21px; height: 21px; }
+.resume-preview .resume-fit { margin-left: 4px; }
+.resume-heading :is(button,a) { color: #687086; transition: background .15s ease, color .15s ease; border-radius: 6px; }
+.resume-heading :is(button,a):hover { color: var(--theme-text-color); }
+.resume-zoom { gap: 0; padding: 0 3px; background: #58609b07; border-radius: 6px; }
+.resume-preview .resume-scale { width: 48px; font-size: 12px; font-variant-numeric: tabular-nums; }
+.resume-tools { display: flex; justify-content: center; padding: 3px 12px; border-bottom: 1px solid #58609b0d; }
+.resume-pagination > span { min-width: 56px; text-align: center; font-size: 11px; font-variant-numeric: tabular-nums; }
+.resume-viewport { min-height: 0; flex: 1; overflow: auto; overscroll-behavior: contain; padding: 18px; scrollbar-width: thin; scrollbar-color: #aeb5d570 transparent; }
+.resume-viewport .react-pdf__Document { width: max-content; min-width: 100%; min-height: 100%; }
+.resume-viewport .react-pdf__Page { margin: 0 auto; width: max-content; box-shadow: 0 2px 16px #29334a0d; }
+.resume-viewport .react-pdf__Page canvas { display: block; }
+.resume-message { padding: 40px 12px; text-align: center; color: #626b7b; }
+.resume-message button { width: auto; padding-inline: 12px; }
+.resume-message a { display: block; margin-top: 12px; }
+.paper-annotated-page { position: relative; margin: 0 auto; }
+.paper-note-editor { position: absolute; z-index: 6; width: min(220px, 100%); padding: 8px; border: 1px solid #aeb5d580; border-radius: 8px; background: #f7f8fcf2; box-shadow: 0 4px 20px #29334a15; }
+.paper-note-editor textarea { box-sizing: border-box; display: block; width: 100%; height: 96px; resize: vertical; border: 0; background: transparent; color: #303747; font: 14px/1.4 Arial,sans-serif; }
+.paper-note-editor > div { display: flex; justify-content: flex-end; gap: 6px; margin-top: 6px; }
+.resume-preview .paper-note-editor button { width: auto; padding: 5px 8px; font-size: 12px; }
+.resume-preview svg.paper-ink-layer { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 5; touch-action: none; cursor: crosshair; }
+.paper-ink-layer.is-reading { pointer-events: none; }
+.paper-tools-host { position: absolute; inset: 68px 16px auto; z-index: 10; pointer-events: none; display: flex; justify-content: flex-end; }
+.paper-mark-tools { pointer-events: auto; display: flex; align-items: center; flex-wrap: wrap; gap: 3px; width: max-content; max-width: 100%; padding: 4px 8px; border: 1px solid #ffffffc0; border-radius: 10px; background: rgb(247 248 252 / 94%); backdrop-filter: blur(8px); box-shadow: 0 4px 20px #29334a12; }
+.paper-mark-tools button[aria-pressed="true"] { background: #58609b18; color: var(--theme-text-color); }
+.paper-tool-divider { height: 18px; width: 1px; margin: 0 4px; background: #58609b20; }
+.paper-mark-tools small { padding: 0 6px; color: #737988; font-size: 10px; max-width: 180px; }
+.paper-mark-tools-shell { position: relative; max-width: 100%; pointer-events: auto; }
+.paper-mark-tools { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; background: rgb(247 248 252 / 72%); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.paper-mark-tools::-webkit-scrollbar { display: none; }
+.paper-mark-tools > button, .paper-mark-tools > .paper-tool-divider { flex-shrink: 0; }
+.is-text-highlighting .textLayer ::selection { background: color-mix(in srgb, var(--ink-selection) 35%, transparent); }
+.paper-ink-colors { position: absolute; top: calc(100% + 6px); right: 0; display: flex; gap: 3px; padding: 5px; border: 1px solid #ffffffc0; border-radius: 8px; background: rgb(247 248 252 / 97%); box-shadow: 0 4px 16px #29334a15; }
+.resume-preview .paper-ink-colors button { width: 24px; height: 24px; padding: 6px; }
+.paper-ink-colors { background: rgb(247 248 252 / 72%); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.paper-ink-colors i { display: block; width: 10px; height: 10px; border-radius: 50%; }
+.paper-confirm { width: min(360px, calc(100vw - 40px)); padding: 24px; border: 1px solid #ffffffbb; border-radius: 14px; background: #f7f8fcf5; color: #303747; box-shadow: 0 20px 70px #1b234033; font: 14px/1.6 Arial,sans-serif; }
+.paper-confirm::backdrop { background: #25283738; backdrop-filter: blur(3px); }
+.paper-confirm h3 { margin: 0 0 8px; font-size: 18px; }
+.paper-confirm p { margin: 0 0 22px; color: #687086; }
+.paper-confirm > div { display: flex; justify-content: flex-end; gap: 8px; }
+.paper-confirm button { border: 0; border-radius: 7px; padding: 9px 12px; cursor: pointer; background: #58609b0c; color: #58609b; }
+.paper-confirm button:last-child { background: var(--theme-color); color: white; }
+@media (max-width: 440px) {
+  .paper-pdf-preview .resume-heading { gap: 2px; padding-inline: 6px; }
+  .paper-pdf-preview .resume-pagination { gap: 0; }
+  .paper-pdf-preview .resume-pagination > span { min-width: 38px; }
+  .paper-pdf-preview .resume-heading button, .paper-pdf-preview .resume-actions a { width: 28px; padding: 5px; }
+  .paper-pdf-preview .resume-scale { width: 38px; }
+  .paper-pdf-preview .resume-zoom { padding: 0; }
+  .paper-pdf-preview .resume-fit { margin-left: 0; }
+}
+@media (max-width: 600px) { .paper-mark-tools small { flex-basis: 100%; max-width: none; } }
+@media (min-width: 601px) {
+  .resume-preview { width: min(680px, calc(100vw - 64px)); height: 90dvh; max-height: 1180px; border-radius: 12px; background: rgb(247 248 252 / 92%); }
+  .resume-viewport { padding: 14px; background: #e5e8f040; }
+  .resume-viewport .react-pdf__Page { box-shadow: 0 6px 28px #27324b12, 0 0 0 1px #27324b08; }
+}
+@media (max-width: 600px) {
+  .resume-preview { width: calc(100vw - 32px); height: 86dvh; max-height: calc(100dvh - 48px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); border-radius: 14px; }
+  .paper-confirm { box-sizing: border-box; width: min(300px, calc(100vw - 40px)); padding: 18px; border-radius: 12px; font-size: 13px; }
+  .paper-confirm h3 { font-size: 16px; margin-bottom: 6px; }
+  .paper-confirm p { margin-bottom: 16px; }
+  .paper-confirm > div { gap: 6px; }
+  .paper-confirm button { padding: 8px 10px; font-size: 12px; }
+  .paper-tools-host { justify-content: center; }
+  .resume-heading { padding: 8px 10px; gap: 6px; }
+  .resume-actions, .resume-window-actions { gap: 0; }
+  .resume-preview button, .resume-actions a { width: 32px; height: 34px; }
+  .resume-preview .resume-scale { width: 42px; }
+  .resume-viewport { padding: 8px; }
+  .paper-mark-tools { display: flex; flex-wrap: nowrap; gap: 2px; padding: 3px 5px; border-radius: 8px; }
+  .paper-mark-tools > .paper-tool-divider { display: none; }
+  .resume-preview .paper-mark-tools button { width: 28px; height: 30px; padding: 6px; }
+  .paper-mark-tools button svg { width: 15px; height: 15px; }
+  .paper-mark-tools .paper-tool-divider { height: 15px; margin-inline: 3px; }
+}
+
+@media (max-width: 440px) {
+  .paper-pdf-preview .resume-heading { grid-template-columns: auto minmax(0, 1fr) auto; gap: 4px; padding: 6px; min-height: 48px; }
+  .paper-pdf-preview .resume-zoom { justify-self: center; }
+  .paper-pdf-preview .resume-heading button,
+  .paper-pdf-preview .resume-actions a { width: 26px; height: 32px; padding: 4px; }
+  .paper-pdf-preview .resume-heading .resume-scale { width: 36px; font-size: 11px; }
+  .paper-pdf-preview .resume-pagination > span { min-width: 34px; font-size: 11px; }
+  .paper-pdf-preview .resume-viewport { padding: 6px; }
+}
+
+@media (max-width: 720px) {
+  .paper-pdf-preview .paper-tools-host { top: 62px; inset-inline: 12px; justify-content: center; }
+  .paper-pdf-preview .resume-viewport { padding-top: 60px; scroll-padding-top: 60px; }
+}
+.resume-preview .resume-pagination > .pdf-loading-slot { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; width: 18px; margin-left: 2px; }
+.pdf-loading-ring { display: block; width: 15px; height: 15px; border: 1.5px solid rgb(88 96 155 / 20%); border-top-color: #58609b; border-radius: 50%; animation: pdf-loading-spin .8s linear infinite; }
+@keyframes pdf-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .pdf-loading-ring { animation-duration: 2s; } }

@@ -1,0 +1,8 @@
+/* Empty configuration should not collapse the content column or its scroll range. */
+#root {
+    width: 100%;
+}
+
+.content-shell:not(:has(.news-list li, .publication-card, .timeline-item, .project-card)) #projects {
+    min-height: calc(100svh - 150px);
+}

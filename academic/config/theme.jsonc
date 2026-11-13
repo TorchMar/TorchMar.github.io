@@ -1,0 +1,15 @@
+{
+  /* Theme palette. Keep these values coordinated when creating a new theme. */
+  "--theme-color": "#58609b", /* Primary theme color for navigation indicators, accent lines, and decorations. */
+  "--theme-text-color": "var(--theme-color)", /* Theme text color for headings, links, and emphasized text. */
+  "--theme-color-hover": "#6154cc", /* General hover color for themed elements. */
+  "--theme-color-soft": "#8b94c5", /* Soft theme color for icons, venue tags, and secondary accents. */
+  "--theme-color-pale": "#cfd3e6", /* Pale theme color for timelines, dates, and subtle borders. */
+  "--theme-color-border": "#aeb5d5", /* Interactive theme border used for hover and focus states. */
+  "--theme-color-surface": "#f5f6fa", /* Light theme surface for tags and supporting information. */
+  "--theme-color-surface-soft": "#f7f8fc", /* Softer theme surface for year labels and hover states. */
+  "--theme-color-surface-strong": "#eef0ff", /* Stronger theme surface for project category labels. */
+  "--theme-color-translucent": "rgba(88, 96, 155, 0.2)", /* Translucent theme color for light borders and overlays. */
+  "--theme-action-color": "#7467df", /* Background color for primary action buttons. */
+  "--theme-action-hover": "#6154cc" /* Hover background color for primary action buttons. */
+}
