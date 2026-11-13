@@ -3,6 +3,8 @@
     width: 88%;
     height: auto;
     margin: 0 auto;
+    -webkit-mask: url('../assets/profile-edge.svg') center / 100% 100% no-repeat;
+    mask: url('../assets/profile-edge.svg') center / 100% 100% no-repeat;
 }
 .hero-grid{
 }
