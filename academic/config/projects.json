@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "title": "LLM-Based Corporate Culture Identification and Characterization",
+    "image": "assets/corporate-culture-project.svg",
+    "meta": "47th SJTU PRP",
+    "text": "Built a pipeline using DeepSeek to extract and quantify corporate culture from 1,381 annual reports. Evaluated model reliability through cross-model validation and ablation studies, and built causal knowledge graphs for structured reasoning.",
+    "note": "University-level Outstanding Project Award (top 15%).",
+    "action": "demo"
+  }
+]

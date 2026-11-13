@@ -11,6 +11,14 @@
     /* hyphens: auto; */
 }
 
+.intro-text > p {
+    margin: 0;
+}
+
+.intro-text > p + p {
+    margin-top: 1.6em;
+}
+
 .callout {
     position: relative;
     display: grid;

@@ -11,5 +11,12 @@ function NewsSegment({ segment }) {
 }
 
 export default function News() {
-  return <section className="News" id="news"><div className="card-title">News</div><ul className="news-list">{newsItems.map((item) => <li key={item.date}><div className="news-time">{item.date}</div><div className="news-content">{item.segments.map((segment, index) => <NewsSegment segment={segment} key={`${item.date}-${index}`} />)}</div></li>)}</ul></section>;
+  return (
+    <section className="News" id="news">
+      <div className="card-title">News</div>
+      {newsItems.length > 0 ? (
+        <ul className="news-list">{newsItems.map((item) => <li key={item.date}><div className="news-time">{item.date}</div><div className="news-content">{item.segments.map((segment, index) => <NewsSegment segment={segment} key={`${item.date}-${index}`} />)}</div></li>)}</ul>
+      ) : <p className="news-list">No updates yet.</p>}
+    </section>
+  );
 }

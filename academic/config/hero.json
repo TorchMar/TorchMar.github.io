@@ -1,11 +1,16 @@
 {
-  "name": "TorchMar",
-  "title": "Academic Homepage",
+  "name": "Yuhong Liu",
+  "title": "Undergraduate Student at SJTU",
   "profileImage": "assets/profile-placeholder.svg",
   "brandLogo": "assets/torchmar-logo.svg",
   "descriptions": [],
   "primaryLinks": [
-    { "label": "Blog", "url": "/blog/" }
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "CV", "url": null }
   ],
-  "socialLinks": []
+  "socialLinks": [
+    { "label": "Email", "icon": "email", "url": "mailto:torchmar@sjtu.edu.cn" },
+    { "label": "GitHub", "icon": "github", "url": "https://github.com/TorchMar" },
+    { "label": "Google Scholar", "icon": "scholar", "url": null }
+  ]
 }

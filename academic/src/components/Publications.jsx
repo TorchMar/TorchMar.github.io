@@ -55,6 +55,7 @@ export default function Publications() {
       </div>
       <div className="card-title">Publications</div>
       <div className="publications-list">
+        {publications.length === 0 && <p>No publications listed yet.</p>}
         {publications.map((paper) => {
           const citationCount = resolveCitationCount(paper.title, citationMap);
           return (

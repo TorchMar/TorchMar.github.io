@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "organization": "APEX Data & Knowledge Management Lab, Shanghai Jiao Tong University",
+    "logo": "assets/apex-placeholder.svg",
+    "period": "2025.09 – Present",
+    "location": "Shanghai, China",
+    "role": "Research Assistant",
+    "details": [
+      {
+        "label": "Advisors",
+        "text": "Jianghao Lin and Weinan Zhang"
+      },
+      {
+        "label": "Research",
+        "text": "Exploring LLM post-training to improve the capabilities and efficiency of LLM-based agents."
+      }
+    ]
+  }
+]

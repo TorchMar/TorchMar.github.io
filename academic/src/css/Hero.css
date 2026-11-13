@@ -88,6 +88,11 @@
     font-size: 1.4rem;
     color: var(--theme-text-color);
 }
+.meta-linkitem[aria-disabled="true"],
+.icon-link[aria-disabled="true"] {
+    opacity: 0.65;
+    cursor: default;
+}
 .small-text{
     color: #acacac;
     font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;

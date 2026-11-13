@@ -1,3 +1,18 @@
 {
-  "paragraphs": [[{ "text": "Biography to be added." }]]
+  "paragraphs": [
+    [
+      { "text": "I’m Yuhong Liu, an undergraduate pursuing dual bachelor’s degrees in computer science and finance at " },
+      { "text": "Shanghai Jiao Tong University", "href": "https://www.sjtu.edu.cn/" },
+      { "text": ". I’m also a research assistant at the " },
+      { "text": "APEX Data & Knowledge Management Lab", "href": "https://apex.sjtu.edu.cn/" },
+      { "text": ", advised by " },
+      { "text": "Jianghao Lin", "href": "https://acem.sjtu.edu.cn/faculty/linjianghao.html" },
+      { "text": " and " },
+      { "text": "Weinan Zhang", "href": "https://www.cs.sjtu.edu.cn/jiaoshiml/zhangweinan.html" },
+      { "text": "." }
+    ],
+    [
+      { "text": "My research interests include large language models, AI agents, and financial technology. I currently work on model distillation and explore how post-training can make LLM-based agents more capable and efficient." }
+    ]
+  ]
 }

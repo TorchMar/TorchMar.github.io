@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <title>Annual reports, DeepSeek, and causal knowledge graphs</title>
+  <defs>
+    <linearGradient id="background" x2="100%" y2="100%">
+      <stop stop-color="#f7f8fc"/>
+      <stop offset="1" stop-color="#e7eaf7"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="18" fill="url(#background)"/>
+  <g fill="none" stroke="#d6daed" stroke-width="1.5">
+    <path d="M28 60h424M28 257h424"/>
+    <path d="M160 60v197M320 60v197" stroke-dasharray="4 7"/>
+  </g>
+  <g fill="none" stroke="#8b94c5" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M128 141h66m-8-7 8 7-8 7m99-7h51m-8-7 8 7-8 7"/>
+    <rect x="57" y="105" width="60" height="77" rx="7" fill="#e1e4f4"/>
+    <rect x="48" y="96" width="60" height="77" rx="7" fill="#f8f9fc"/>
+    <path d="M61 116h33m-33 13h27m-27 13h33m-33 13h22"/>
+  </g>
+  <g fill="#f8f9fc" stroke="#58609b" stroke-width="3">
+    <rect x="210" y="102" width="60" height="74" rx="9"/>
+    <path d="M227 102V90m13 12V90m13 12V90m-26 86v12m13-12v12m13-12v12m-43-67h-12m12 18h-12m12 18h-12m72-36h12m-12 18h12m-12 18h12" stroke-linecap="round"/>
+    <path d="M240 121c2 9 7 14 17 17-10 3-15 8-17 18-3-10-8-15-18-18 10-3 15-8 18-17Z" fill="#8b94c5" stroke="none"/>
+  </g>
+  <g fill="none" stroke="#8b94c5" stroke-linecap="round" stroke-width="3">
+    <path d="m372 112 34 26-32 27m32-27 30 30m-30-30 26-27"/>
+    <g fill="#fff">
+      <circle cx="372" cy="112" r="8"/><circle cx="374" cy="165" r="8"/>
+      <circle cx="432" cy="111" r="8"/><circle cx="436" cy="168" r="8"/>
+    </g>
+    <circle cx="406" cy="138" r="10" fill="#58609b" stroke="#58609b"/>
+  </g>
+  <g fill="#464f87" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">
+    <text x="81" y="222">1,381 reports</text>
+    <text x="240" y="222">DeepSeek</text>
+    <text x="400" y="222">Causal graph</text>
+  </g>
+</svg>

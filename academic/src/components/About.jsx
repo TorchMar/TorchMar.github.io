@@ -20,12 +20,16 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="intro-text">
-        {about.paragraphs.map((paragraph, paragraphIndex) => <React.Fragment key={paragraphIndex}>
-          {paragraph.map((segment, segmentIndex) => segment.strong
-            ? <strong key={segmentIndex}>{segment.text}</strong>
-            : <React.Fragment key={segmentIndex}>{segment.text}</React.Fragment>)}
-          {paragraphIndex < about.paragraphs.length - 1 && <><br /><br /></>}
-        </React.Fragment>)}
+        {about.paragraphs.map((paragraph, paragraphIndex) => (
+          <p key={paragraphIndex}>
+            {paragraph.map(({ text, strong, href }, index) => {
+              const content = strong ? <strong>{text}</strong> : text;
+              return href
+                ? <a href={href} key={index}>{content}</a>
+                : <React.Fragment key={index}>{content}</React.Fragment>;
+            })}
+          </p>
+        ))}
         {about.quote && <InfoCallout icon={Quote} footer={about.quote.author} variant="quote">
           {about.quote.text}
         </InfoCallout>}

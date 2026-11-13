@@ -1,8 +1,9 @@
-/* Empty configuration should not collapse the content column or its scroll range. */
+/* Keep the content column full width even with little profile content. */
 #root {
     width: 100%;
 }
 
-.content-shell:not(:has(.news-list li, .publication-card, .timeline-item, .project-card)) #projects {
+/* Leave room to scroll the last section under the fixed navigation. */
+#projects {
     min-height: calc(100svh - 150px);
 }

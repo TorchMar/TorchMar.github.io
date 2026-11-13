@@ -34,6 +34,7 @@
     "text": { "type": "string", "minLength": 1 },
     "asset": { "type": "string", "pattern": "^assets/[^\\\\]+$" },
     "link": { "type": "string", "pattern": "^(https?://|mailto:|/|#)" },
+    "profileLink": { "anyOf": [{ "$ref": "#/$defs/link" }, { "type": "null" }] },
     "segment": {
       "type": "object", "additionalProperties": false, "required": ["text"],
       "properties": { "text": { "$ref": "#/$defs/text" }, "strong": { "type": "boolean" }, "href": { "$ref": "#/$defs/link" } }
@@ -51,12 +52,12 @@
         } },
         "primaryLinks": { "type": "array", "items": {
           "type": "object", "additionalProperties": false, "required": ["label"],
-          "properties": { "label": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/link" }, "asset": { "$ref": "#/$defs/asset" }, "preview": { "enum": ["pdf"], "description": "Open this link in the custom PDF preview dialog." } },
+          "properties": { "label": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/profileLink" }, "asset": { "$ref": "#/$defs/asset" }, "preview": { "enum": ["pdf"], "description": "Open this link in the custom PDF preview dialog." } },
           "oneOf": [{ "required": ["url"] }, { "required": ["asset"] }]
         } },
         "socialLinks": { "type": "array", "items": {
           "type": "object", "additionalProperties": false, "required": ["label", "icon", "url"],
-          "properties": { "label": { "$ref": "#/$defs/text" }, "icon": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/link" } }
+          "properties": { "label": { "$ref": "#/$defs/text" }, "icon": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/profileLink" } }
         } }
       }
     },

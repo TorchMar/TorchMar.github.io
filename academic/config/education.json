@@ -1,4 +1,12 @@
 {
-  "enabled": false,
-  "items": []
+  "enabled": true,
+  "items": [
+    {
+      "institution": "Shanghai Jiao Tong University",
+      "degree": "Dual Bachelor’s Degrees in Computer Science and Finance",
+      "field": "Antai College of Economics and Management",
+      "period": "Sep 2024 – Jun 2028 (expected)",
+      "location": "Shanghai, China"
+    }
+  ]
 }

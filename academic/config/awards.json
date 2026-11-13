@@ -1,4 +1,16 @@
 {
-  "enabled": false,
-  "items": []
+  "enabled": true,
+  "items": [
+    {
+      "title": "Guo Xie Birong Scholarship",
+      "organization": "Shanghai Jiao Tong University",
+      "year": "2025",
+      "description": "University-level merit award (top 10%)."
+    },
+    {
+      "title": "First Prize, “Zhixiang Cup” Shanghai University Student Data Analysis Case Competition",
+      "year": "2025",
+      "description": "Top 5%. Project: Machine Learning-Based Prediction of Environmental Risks in Listed Companies."
+    }
+  ]
 }
