@@ -1,14 +1,19 @@
 [
   {
     "organization": "APEX Data & Knowledge Management Lab, Shanghai Jiao Tong University",
-    "logo": "assets/apex-placeholder.svg",
+    "logo": "assets/apex-logo.png",
+    "logoBackground": "#34495e",
     "period": "2025.09 – Present",
     "location": "Shanghai, China",
     "role": "Research Assistant",
     "details": [
       {
         "label": "Advisors",
-        "text": "Jianghao Lin and Weinan Zhang"
+        "text": [
+          { "text": "Jianghao Lin", "href": "https://acem.sjtu.edu.cn/faculty/linjianghao.html", "strong": true },
+          { "text": " and " },
+          { "text": "Weinan Zhang", "href": "https://www.cs.sjtu.edu.cn/jiaoshiml/zhangweinan.html", "strong": true }
+        ]
       },
       {
         "label": "Research",

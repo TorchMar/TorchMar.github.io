@@ -66,13 +66,7 @@ function ProjectMediaFrame({ project }) {
 
 function ProjectAction({ project }) {
   const { label, Icon } = actionDetails[project.action];
-  const content = <><Icon size={14} aria-hidden="true" /><span>{label}</span></>;
-
-  if (!project.link) {
-    return <span className="project-link is-disabled" aria-disabled="true">{content}</span>;
-  }
-
-  return <a className="project-link" href={project.link} target="_blank" rel="noreferrer">{content}</a>;
+  return <a className="project-link" href={project.link} target="_blank" rel="noreferrer"><Icon size={14} aria-hidden="true" /><span>{label}</span></a>;
 }
 
 function ProjectMeta({ meta }) {
@@ -99,9 +93,9 @@ export default function Projects() {
               <h3>{project.title}</h3>
               <p>{project.text}</p>
               {project.note && <div className="project-note">{project.note}</div>}
-              <div className="project-actions">
+              {project.link && <div className="project-actions">
                 <ProjectAction project={project} />
-              </div>
+              </div>}
             </div>
           </article>
         ))}

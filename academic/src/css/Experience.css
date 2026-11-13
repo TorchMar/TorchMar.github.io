@@ -166,6 +166,12 @@
     object-fit: contain;
 }
 
+.org-logo-with-background {
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 0.2rem;
+}
+
 .exp-container {
     position: relative;
     z-index: 1;
@@ -234,8 +240,13 @@
 }
 
 .exp-project-name {
-    color: #242424;
-    font-weight: 700;
+    color: var(--theme-text-color);
+    font-weight: 800;
+}
+
+.exp-details a {
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
 }
 
 @media (max-width: 1100px) {

@@ -40,7 +40,9 @@ export const publicationPreviews = Object.fromEntries(
 
 export const hero = {
   ...heroData,
-  profileImage: resolveAsset(heroData.profileImage),
+  profileImage: heroData.profileImage.startsWith("/images/")
+    ? heroData.profileImage
+    : resolveAsset(heroData.profileImage),
   brandLogo: resolveAsset(heroData.brandLogo),
   primaryLinks: heroData.primaryLinks.map((link) => ({
     ...link,

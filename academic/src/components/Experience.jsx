@@ -133,7 +133,9 @@ export default function Experience() {
             <div className="timeline-year">{experience.period.slice(0, 4)}</div>
             <div className="timeline-content">
               <div className="org-logo-container">
-                <img className="org-logo" src={experience.logo} alt={`${experience.organization} logo`} />
+                <img className={`org-logo${experience.logoBackground ? " org-logo-with-background" : ""}`}
+                  src={experience.logo} alt={`${experience.organization} logo`}
+                  style={experience.logoBackground ? { backgroundColor: experience.logoBackground } : undefined} />
               </div>
               <div className="exp-container">
                 <div className="timeline-header">
@@ -149,7 +151,15 @@ export default function Experience() {
                 <ul className="exp-details">
                   {experience.details.map((detail) => (
                     <li key={detail.label}>
-                      <span><span className="exp-project-name">{detail.label}</span> {detail.text}</span>
+                      <span>
+                        <strong className="exp-project-name">{detail.label}:</strong>{" "}
+                        {Array.isArray(detail.text) ? detail.text.map((segment, index) => {
+                          const content = segment.strong ? <strong>{segment.text}</strong> : segment.text;
+                          return segment.href
+                            ? <a href={segment.href} key={index}>{content}</a>
+                            : <React.Fragment key={index}>{content}</React.Fragment>;
+                        }) : detail.text}
+                      </span>
                     </li>
                   ))}
                 </ul>

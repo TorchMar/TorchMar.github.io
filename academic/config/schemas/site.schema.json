@@ -45,7 +45,7 @@
       "required": ["name", "title", "profileImage", "brandLogo", "descriptions", "primaryLinks", "socialLinks"],
       "properties": {
         "name": { "$ref": "#/$defs/text" }, "title": { "$ref": "#/$defs/text" },
-        "profileImage": { "$ref": "#/$defs/asset" }, "brandLogo": { "$ref": "#/$defs/asset" },
+        "profileImage": { "oneOf": [{ "$ref": "#/$defs/asset" }, { "type": "string", "pattern": "^/images/[a-zA-Z0-9_-]+\\.[a-zA-Z0-9]+$" }] }, "brandLogo": { "$ref": "#/$defs/asset" },
         "descriptions": { "type": "array", "items": {
           "type": "object", "additionalProperties": false, "required": ["icon", "text"],
           "properties": { "icon": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } }
@@ -89,7 +89,8 @@
       "type": "object", "additionalProperties": false, "required": ["organization", "logo", "period", "location", "role", "details"],
       "properties": {
         "organization": { "$ref": "#/$defs/text" }, "logo": { "$ref": "#/$defs/asset" }, "period": { "$ref": "#/$defs/text" }, "location": { "$ref": "#/$defs/text" }, "role": { "$ref": "#/$defs/text" },
-        "details": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["label", "text"], "properties": { "label": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } } } }
+        "logoBackground": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "details": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["label", "text"], "properties": { "label": { "$ref": "#/$defs/text" }, "text": { "oneOf": [{ "$ref": "#/$defs/text" }, { "$ref": "#/$defs/segments" }] } } } }
       }
     } },
     "projects": { "type": "array", "items": {

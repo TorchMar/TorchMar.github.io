@@ -24,7 +24,9 @@ export function loadConfigs() {
   ]));
 }
 
-export function validateConfigs(configs, assetExists = file => fs.existsSync(path.join(root, "src", file))) {
+export function validateConfigs(configs, assetExists = file => fs.existsSync(
+  file.startsWith("/images/") ? path.join(root, "..", "public", file) : path.join(root, "src", file),
+)) {
   const errors = [];
   for (const [filename, type] of Object.entries(configTypes)) {
     const validate = ajv.getSchema(`site#/$defs/${type}`);
